@@ -1,0 +1,46 @@
+//
+//  AppConfigurationService.swift
+//  EmpApp
+//
+//  Created by Rahul Dubey on 7/30/22.
+//
+
+import Foundation
+
+protocol AppConfigurationServiceProtocol {
+    var empDomain: String { get }
+    var empPath: String { get }
+}
+
+struct AppConfigurationService: AppConfigurationServiceProtocol {
+   
+    enum Keys: String {
+        case domain
+        case path
+        case badPath
+        case emptyPath
+    }
+    
+    var empDomain: String {
+        loadLocalConfiguration()[Keys.domain.rawValue] ?? ""
+    }
+    
+    var empPath: String {
+        loadLocalConfiguration()[Keys.path.rawValue] ?? ""
+    }
+
+    // Call the local cache get the configuration
+    func loadLocalConfiguration() -> [String: String] {
+        var configDictionary = [String: String]()
+        configDictionary[Keys.domain.rawValue] = "s3.amazonaws.com"
+        configDictionary[Keys.path.rawValue] = "/sq-mobile-interview/employees.json"
+        configDictionary[Keys.badPath.rawValue] = "/employees_malformed.json"
+        configDictionary[Keys.emptyPath.rawValue] = "/employees_empty.json"
+        return configDictionary
+    }
+    
+    // Call the remote service and get the configuration
+    func loadRemoteConfiguration() -> [String: String] {
+        return [:]
+    }
+}

@@ -9,13 +9,20 @@
 /* Begin PBXBuildFile section */
 		BB551F942894E39C0056A32D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551F932894E39C0056A32D /* AppDelegate.swift */; };
 		BB551F962894E39C0056A32D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551F952894E39C0056A32D /* SceneDelegate.swift */; };
-		BB551F982894E39C0056A32D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551F972894E39C0056A32D /* ViewController.swift */; };
+		BB551F982894E39C0056A32D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551F972894E39C0056A32D /* HomeViewController.swift */; };
 		BB551F9B2894E39C0056A32D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB551F992894E39C0056A32D /* Main.storyboard */; };
 		BB551F9D2894E39D0056A32D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB551F9C2894E39D0056A32D /* Assets.xcassets */; };
 		BB551FA02894E39D0056A32D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB551F9E2894E39D0056A32D /* LaunchScreen.storyboard */; };
 		BB551FAB2894E39E0056A32D /* EmpAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FAA2894E39E0056A32D /* EmpAppTests.swift */; };
 		BB551FB52894E39E0056A32D /* EmpAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FB42894E39E0056A32D /* EmpAppUITests.swift */; };
 		BB551FB72894E39E0056A32D /* EmpAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FB62894E39E0056A32D /* EmpAppUITestsLaunchTests.swift */; };
+		BB551FC82894E6660056A32D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FC72894E6660056A32D /* HomeViewModel.swift */; };
+		BB551FCB2894EC770056A32D /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FCA2894EC770056A32D /* Employee.swift */; };
+		BB551FE12894F7740056A32D /* EmpServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE02894F7740056A32D /* EmpServiceOperation.swift */; };
+		BB551FE42894F7D40056A32D /* AppConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE32894F7D40056A32D /* AppConfigurationService.swift */; };
+		BB551FE82894FF2F0056A32D /* EmpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE72894FF2F0056A32D /* EmpService.swift */; };
+		BBC8DCF528951CDE00B09141 /* RestServicePackage in Frameworks */ = {isa = PBXBuildFile; productRef = BBC8DCF428951CDE00B09141 /* RestServicePackage */; };
+		BBC8DCF728951D4C00B09141 /* RestServicePackage in Resources */ = {isa = PBXBuildFile; fileRef = BBC8DCF628951D4C00B09141 /* RestServicePackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +46,7 @@
 		BB551F902894E39C0056A32D /* EmpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB551F932894E39C0056A32D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB551F952894E39C0056A32D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BB551F972894E39C0056A32D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB551F972894E39C0056A32D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB551F9A2894E39C0056A32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB551F9C2894E39D0056A32D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB551F9F2894E39D0056A32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,12 @@
 		BB551FB02894E39E0056A32D /* EmpAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmpAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB551FB42894E39E0056A32D /* EmpAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpAppUITests.swift; sourceTree = "<group>"; };
 		BB551FB62894E39E0056A32D /* EmpAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB551FC72894E6660056A32D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		BB551FCA2894EC770056A32D /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		BB551FE02894F7740056A32D /* EmpServiceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpServiceOperation.swift; sourceTree = "<group>"; };
+		BB551FE32894F7D40056A32D /* AppConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurationService.swift; sourceTree = "<group>"; };
+		BB551FE72894FF2F0056A32D /* EmpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpService.swift; sourceTree = "<group>"; };
+		BBC8DCF628951D4C00B09141 /* RestServicePackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RestServicePackage; path = ../../RestServicePackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC8DCF528951CDE00B09141 /* RestServicePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +93,12 @@
 		BB551F872894E39C0056A32D = {
 			isa = PBXGroup;
 			children = (
+				BBC8DCF028951CA400B09141 /* SwiftPackageManager */,
 				BB551F922894E39C0056A32D /* EmpApp */,
 				BB551FA92894E39E0056A32D /* EmpAppTests */,
 				BB551FB32894E39E0056A32D /* EmpAppUITests */,
 				BB551F912894E39C0056A32D /* Products */,
+				BBC8DCF328951CDE00B09141 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,11 +115,12 @@
 		BB551F922894E39C0056A32D /* EmpApp */ = {
 			isa = PBXGroup;
 			children = (
+				BB551FC92894EC6D0056A32D /* DataModel */,
 				BB551FC42894E3E00056A32D /* ViewController */,
 				BB551FC32894E3D60056A32D /* ViewModel */,
+				BB551FC62894E6170056A32D /* Networking */,
 				BB551F932894E39C0056A32D /* AppDelegate.swift */,
 				BB551F952894E39C0056A32D /* SceneDelegate.swift */,
-				BB551F972894E39C0056A32D /* ViewController.swift */,
 				BB551F992894E39C0056A32D /* Main.storyboard */,
 				BB551F9C2894E39D0056A32D /* Assets.xcassets */,
 				BB551F9E2894E39D0056A32D /* LaunchScreen.storyboard */,
@@ -132,6 +149,7 @@
 		BB551FC32894E3D60056A32D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BB551FC72894E6660056A32D /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -139,8 +157,58 @@
 		BB551FC42894E3E00056A32D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BB551F972894E39C0056A32D /* HomeViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BB551FC62894E6170056A32D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BBC8DCF828951E7400B09141 /* ConfigurationService */,
+				BB551FE22894F7CB0056A32D /* EmpServices */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BB551FC92894EC6D0056A32D /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB551FCA2894EC770056A32D /* Employee.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		BB551FE22894F7CB0056A32D /* EmpServices */ = {
+			isa = PBXGroup;
+			children = (
+				BB551FE02894F7740056A32D /* EmpServiceOperation.swift */,
+				BB551FE72894FF2F0056A32D /* EmpService.swift */,
+			);
+			path = EmpServices;
+			sourceTree = "<group>";
+		};
+		BBC8DCF028951CA400B09141 /* SwiftPackageManager */ = {
+			isa = PBXGroup;
+			children = (
+				BBC8DCF628951D4C00B09141 /* RestServicePackage */,
+			);
+			path = SwiftPackageManager;
+			sourceTree = "<group>";
+		};
+		BBC8DCF328951CDE00B09141 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBC8DCF828951E7400B09141 /* ConfigurationService */ = {
+			isa = PBXGroup;
+			children = (
+				BB551FE32894F7D40056A32D /* AppConfigurationService.swift */,
+			);
+			path = ConfigurationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +227,9 @@
 			dependencies = (
 			);
 			name = EmpApp;
+			packageProductDependencies = (
+				BBC8DCF428951CDE00B09141 /* RestServicePackage */,
+			);
 			productName = EmpApp;
 			productReference = BB551F902894E39C0056A32D /* EmpApp.app */;
 			productType = "com.apple.product-type.application";
@@ -248,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB551FA02894E39D0056A32D /* LaunchScreen.storyboard in Resources */,
+				BBC8DCF728951D4C00B09141 /* RestServicePackage in Resources */,
 				BB551F9D2894E39D0056A32D /* Assets.xcassets in Resources */,
 				BB551F9B2894E39C0056A32D /* Main.storyboard in Resources */,
 			);
@@ -274,9 +346,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB551F982894E39C0056A32D /* ViewController.swift in Sources */,
+				BB551F982894E39C0056A32D /* HomeViewController.swift in Sources */,
 				BB551F942894E39C0056A32D /* AppDelegate.swift in Sources */,
+				BB551FE42894F7D40056A32D /* AppConfigurationService.swift in Sources */,
 				BB551F962894E39C0056A32D /* SceneDelegate.swift in Sources */,
+				BB551FCB2894EC770056A32D /* Employee.swift in Sources */,
+				BB551FE12894F7740056A32D /* EmpServiceOperation.swift in Sources */,
+				BB551FE82894FF2F0056A32D /* EmpService.swift in Sources */,
+				BB551FC82894E6660056A32D /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +689,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBC8DCF428951CDE00B09141 /* RestServicePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RestServicePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB551F882894E39C0056A32D /* Project object */;
 }
