@@ -7,17 +7,17 @@
 
 import Foundation
 
-public class FileCacheProvider {
+internal class FileCacheProvider: CacheProviderProtocol {
     
     private var loggingEnabled: Bool
     private let cacheDirectory: String
     
-    init(cacheDir: String, enableLogging: Bool = true) {
+    internal init(cacheDir: String, enableLogging: Bool = true) {
         cacheDirectory = cacheDir
         loggingEnabled = enableLogging
     }
     
-    public func load(key: String) -> Data? {
+    internal func load(key: String) -> Data? {
         guard let path = fileURL(fileName: key) else {
             return nil
         }
@@ -30,7 +30,7 @@ public class FileCacheProvider {
         return data
     }
     
-    public func save(key: String, value: NSData?) {
+    internal func save(key: String, value: NSData?) {
         guard let path = fileURL(fileName: key) else { return }
         guard let newValue = value as Data? else {
             try? FileManager.default.removeItem(at: path)

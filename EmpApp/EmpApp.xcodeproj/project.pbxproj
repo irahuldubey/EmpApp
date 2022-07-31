@@ -54,8 +54,6 @@
 		BB8A07B82897318A00ABE684 /* FileCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07B52897318A00ABE684 /* FileCacheProvider.swift */; };
 		BB8A07B92897318A00ABE684 /* MemoryCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07B62897318A00ABE684 /* MemoryCacheProvider.swift */; };
 		BB8A07BA2897318A00ABE684 /* MemoryCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07B62897318A00ABE684 /* MemoryCacheProvider.swift */; };
-		BB8A07BD2897319600ABE684 /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07BC2897319600ABE684 /* CacheType.swift */; };
-		BB8A07BE2897319600ABE684 /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07BC2897319600ABE684 /* CacheType.swift */; };
 		BB8A07C0289731A400ABE684 /* ActivityIndicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07BF289731A400ABE684 /* ActivityIndicatorProtocol.swift */; };
 		BB8A07C1289731A400ABE684 /* ActivityIndicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07BF289731A400ABE684 /* ActivityIndicatorProtocol.swift */; };
 		BB8A07C2289731AF00ABE684 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */; };
@@ -78,6 +76,12 @@
 		BB8A07E528973A6600ABE684 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07E428973A6600ABE684 /* HomeViewControllerTests.swift */; };
 		BB8A07EA2897400000ABE684 /* UIImageExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07E928973FFF00ABE684 /* UIImageExtensionTests.swift */; };
 		BB8A07ED2897413B00ABE684 /* CacheConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07EC2897413B00ABE684 /* CacheConfigTests.swift */; };
+		BB8A07EF28974A5500ABE684 /* CacheProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07EE28974A5500ABE684 /* CacheProviderProtocol.swift */; };
+		BB8A07F228974AE000ABE684 /* CacheFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07F128974AE000ABE684 /* CacheFactory.swift */; };
+		BB8A07F428974B0300ABE684 /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07F328974B0300ABE684 /* CacheType.swift */; };
+		BB8A07F528974C3C00ABE684 /* CacheProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07EE28974A5500ABE684 /* CacheProviderProtocol.swift */; };
+		BB8A07F628974C4C00ABE684 /* CacheFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07F128974AE000ABE684 /* CacheFactory.swift */; };
+		BB8A07F728974C5100ABE684 /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07F328974B0300ABE684 /* CacheType.swift */; };
 		BBC8DCFB2895259800B09141 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */; };
 		BBC8DCFE2895269000B09141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFD2895269000B09141 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -125,7 +129,6 @@
 		BB8A07AF2897317C00ABE684 /* CacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
 		BB8A07B52897318A00ABE684 /* FileCacheProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileCacheProvider.swift; sourceTree = "<group>"; };
 		BB8A07B62897318A00ABE684 /* MemoryCacheProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCacheProvider.swift; sourceTree = "<group>"; };
-		BB8A07BC2897319600ABE684 /* CacheType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheType.swift; sourceTree = "<group>"; };
 		BB8A07BF289731A400ABE684 /* ActivityIndicatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorProtocol.swift; sourceTree = "<group>"; };
 		BB8A07CB2897329E00ABE684 /* MockAppConfigurationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAppConfigurationService.swift; sourceTree = "<group>"; };
 		BB8A07CC2897329E00ABE684 /* MockEmpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEmpService.swift; sourceTree = "<group>"; };
@@ -139,6 +142,9 @@
 		BB8A07E428973A6600ABE684 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		BB8A07E928973FFF00ABE684 /* UIImageExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensionTests.swift; sourceTree = "<group>"; };
 		BB8A07EC2897413B00ABE684 /* CacheConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheConfigTests.swift; sourceTree = "<group>"; };
+		BB8A07EE28974A5500ABE684 /* CacheProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheProviderProtocol.swift; sourceTree = "<group>"; };
+		BB8A07F128974AE000ABE684 /* CacheFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFactory.swift; sourceTree = "<group>"; };
+		BB8A07F328974B0300ABE684 /* CacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheType.swift; sourceTree = "<group>"; };
 		BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBC8DCFD2895269000B09141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -312,7 +318,7 @@
 		BB8A077E289730F800ABE684 /* CacheManager */ = {
 			isa = PBXGroup;
 			children = (
-				BB8A07BB2897319000ABE684 /* Types */,
+				BB8A07F028974AD900ABE684 /* Factory */,
 				BB8A07B42897317F00ABE684 /* Providers */,
 				BB8A07AD2897317200ABE684 /* Confgurations */,
 			);
@@ -399,16 +405,9 @@
 			children = (
 				BB8A07B52897318A00ABE684 /* FileCacheProvider.swift */,
 				BB8A07B62897318A00ABE684 /* MemoryCacheProvider.swift */,
+				BB8A07EE28974A5500ABE684 /* CacheProviderProtocol.swift */,
 			);
 			path = Providers;
-			sourceTree = "<group>";
-		};
-		BB8A07BB2897319000ABE684 /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				BB8A07BC2897319600ABE684 /* CacheType.swift */,
-			);
-			path = Types;
 			sourceTree = "<group>";
 		};
 		BB8A07C92897320700ABE684 /* Constants */ = {
@@ -502,6 +501,15 @@
 				BB8A07EC2897413B00ABE684 /* CacheConfigTests.swift */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		BB8A07F028974AD900ABE684 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07F128974AE000ABE684 /* CacheFactory.swift */,
+				BB8A07F328974B0300ABE684 /* CacheType.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		BBC8DCF328951CDE00B09141 /* Frameworks */ = {
@@ -637,9 +645,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8A07F428974B0300ABE684 /* CacheType.swift in Sources */,
 				BB8A07A92897316900ABE684 /* UIView+Extension.swift in Sources */,
 				BB8A079F2897314900ABE684 /* HTTPMethod.swift in Sources */,
 				BB551F982894E39C0056A32D /* HomeViewController.swift in Sources */,
+				BB8A07F228974AE000ABE684 /* CacheFactory.swift in Sources */,
 				BB8A07952897314900ABE684 /* RestServiceOperation.swift in Sources */,
 				BB551F942894E39C0056A32D /* AppDelegate.swift in Sources */,
 				BB8A07C0289731A400ABE684 /* ActivityIndicatorProtocol.swift in Sources */,
@@ -662,8 +672,8 @@
 				BB8A07B72897318A00ABE684 /* FileCacheProvider.swift in Sources */,
 				BB8A079D2897314900ABE684 /* HTTPContentType.swift in Sources */,
 				BB8A079B2897314900ABE684 /* HTTPProtocol.swift in Sources */,
+				BB8A07EF28974A5500ABE684 /* CacheProviderProtocol.swift in Sources */,
 				BB8A07872897313100ABE684 /* RestService.swift in Sources */,
-				BB8A07BD2897319600ABE684 /* CacheType.swift in Sources */,
 				BB551FC82894E6660056A32D /* HomeViewModel.swift in Sources */,
 				BB8A07A22897315500ABE684 /* RestServiceResponseHandler.swift in Sources */,
 				BB8A07972897314900ABE684 /* RestServiceRequestConfiguration.swift in Sources */,
@@ -689,6 +699,7 @@
 				BB8A0753289728E100ABE684 /* ConstantTests.swift in Sources */,
 				BB8A07B12897317C00ABE684 /* CacheConfig.swift in Sources */,
 				BB8A07A62897315E00ABE684 /* ImageDownloadManager.swift in Sources */,
+				BB8A07F528974C3C00ABE684 /* CacheProviderProtocol.swift in Sources */,
 				BB8A07A32897315500ABE684 /* RestServiceResponseHandler.swift in Sources */,
 				BB8A07B82897318A00ABE684 /* FileCacheProvider.swift in Sources */,
 				BB8A07AA2897316900ABE684 /* UIView+Extension.swift in Sources */,
@@ -696,7 +707,7 @@
 				BB8A07C8289731C100ABE684 /* EmpService.swift in Sources */,
 				BB8A07962897314900ABE684 /* RestServiceOperation.swift in Sources */,
 				BB8A07DA289732DE00ABE684 /* HomeViewModelTests.swift in Sources */,
-				BB8A07BE2897319600ABE684 /* CacheType.swift in Sources */,
+				BB8A07F628974C4C00ABE684 /* CacheFactory.swift in Sources */,
 				BB8A07CF2897329E00ABE684 /* MockEmpService.swift in Sources */,
 				BB8A07E22897395200ABE684 /* EmployeeTests.swift in Sources */,
 				BB8A07D7289732CB00ABE684 /* EmpServiceOperationTests.swift in Sources */,
@@ -711,6 +722,7 @@
 				BB8A07E0289738D000ABE684 /* EmployeeType.swift in Sources */,
 				BB8A078E2897313E00ABE684 /* RestService.swift in Sources */,
 				BB8A079E2897314900ABE684 /* HTTPContentType.swift in Sources */,
+				BB8A07F728974C5100ABE684 /* CacheType.swift in Sources */,
 				BB8A07C7289731BE00ABE684 /* EmpServiceOperation.swift in Sources */,
 				BB8A07ED2897413B00ABE684 /* CacheConfigTests.swift in Sources */,
 				BB8A07C1289731A400ABE684 /* ActivityIndicatorProtocol.swift in Sources */,

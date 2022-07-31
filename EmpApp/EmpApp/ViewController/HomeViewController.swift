@@ -34,6 +34,11 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
         setupErrorView()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        ImageDownloadManager.shared.clearCache()
+    }
+    
     // MARK: Private Functions
     private func setupPullToRefresh() {
         listTableView.refreshControl = UIRefreshControl()
