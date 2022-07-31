@@ -76,6 +76,8 @@
 		BB8A07E0289738D000ABE684 /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07DB2897389300ABE684 /* EmployeeType.swift */; };
 		BB8A07E22897395200ABE684 /* EmployeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07E12897395200ABE684 /* EmployeeTests.swift */; };
 		BB8A07E528973A6600ABE684 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07E428973A6600ABE684 /* HomeViewControllerTests.swift */; };
+		BB8A07EA2897400000ABE684 /* UIImageExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07E928973FFF00ABE684 /* UIImageExtensionTests.swift */; };
+		BB8A07ED2897413B00ABE684 /* CacheConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07EC2897413B00ABE684 /* CacheConfigTests.swift */; };
 		BBC8DCFB2895259800B09141 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */; };
 		BBC8DCFE2895269000B09141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFD2895269000B09141 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -135,6 +137,8 @@
 		BB8A07DE289738AB00ABE684 /* EmployeeTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTypeTests.swift; sourceTree = "<group>"; };
 		BB8A07E12897395200ABE684 /* EmployeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTests.swift; sourceTree = "<group>"; };
 		BB8A07E428973A6600ABE684 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		BB8A07E928973FFF00ABE684 /* UIImageExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensionTests.swift; sourceTree = "<group>"; };
+		BB8A07EC2897413B00ABE684 /* CacheConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheConfigTests.swift; sourceTree = "<group>"; };
 		BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBC8DCFD2895269000B09141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +252,7 @@
 		BB8A0751289728E100ABE684 /* EmpAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				BB8A07E728973FE900ABE684 /* Abstractions */,
 				BB8A07E328973A5B00ABE684 /* ViewController */,
 				BB8A07DD2897389F00ABE684 /* DataModel */,
 				BB8A07D8289732D500ABE684 /* ViewModel */,
@@ -474,6 +479,31 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		BB8A07E728973FE900ABE684 /* Abstractions */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07EB2897413400ABE684 /* Cache */,
+				BB8A07E828973FF400ABE684 /* Extensions */,
+			);
+			path = Abstractions;
+			sourceTree = "<group>";
+		};
+		BB8A07E828973FF400ABE684 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07E928973FFF00ABE684 /* UIImageExtensionTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB8A07EB2897413400ABE684 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07EC2897413B00ABE684 /* CacheConfigTests.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		BBC8DCF328951CDE00B09141 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,6 +678,7 @@
 				BB8A07DF289738AB00ABE684 /* EmployeeTypeTests.swift in Sources */,
 				BB8A078D2897313A00ABE684 /* RestServiceResponseError.swift in Sources */,
 				BB8A07D4289732BB00ABE684 /* AppConfigurationServiceTests.swift in Sources */,
+				BB8A07EA2897400000ABE684 /* UIImageExtensionTests.swift in Sources */,
 				BB8A07C6289731BC00ABE684 /* AppConfigurationService.swift in Sources */,
 				BB8A07D02897329E00ABE684 /* MockEmpServiceConfiguration.swift in Sources */,
 				BB8A079A2897314900ABE684 /* Results.swift in Sources */,
@@ -681,6 +712,7 @@
 				BB8A078E2897313E00ABE684 /* RestService.swift in Sources */,
 				BB8A079E2897314900ABE684 /* HTTPContentType.swift in Sources */,
 				BB8A07C7289731BE00ABE684 /* EmpServiceOperation.swift in Sources */,
+				BB8A07ED2897413B00ABE684 /* CacheConfigTests.swift in Sources */,
 				BB8A07C1289731A400ABE684 /* ActivityIndicatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

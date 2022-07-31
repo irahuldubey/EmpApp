@@ -116,5 +116,53 @@
             landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D666102-B32E-4341-868A-23BB8DD34B5C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmpAppTests/Abstractions/Extensions/UIImageExtensionTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "testDiskSizeOfImage()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5D666102-B32E-4341-868A-23BB8DD34B5C - 16b37089bfdfb8d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmpAppTests.UIImageExtensionTests.testDiskSizeOfImage() throws -&gt; ()"
+                  moduleName = "EmpAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rahuldubey/Documents/Projects/EmpApp/EmpApp/EmpAppTests/Abstractions/Extensions/UIImageExtensionTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "5D666102-B32E-4341-868A-23BB8DD34B5C - 16b37089bfdfb8b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmpAppTests.UIImageExtensionTests.testDiskSizeOfImage() throws -&gt; ()"
+                  moduleName = "EmpAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rahuldubey/Documents/Projects/EmpApp/EmpApp/EmpAppTests/Abstractions/Extensions/UIImageExtensionTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

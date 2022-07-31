@@ -10,17 +10,20 @@ import Combine
 
 final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     
+    // MARK: Outlets
+    
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var errorView: UIView!
-    
     @IBOutlet weak var listTableView: UITableView!
     
-    let viewModel: HomeViewModel = HomeViewModel()
-    
+    // MARK: Properties
+    internal let viewModel: HomeViewModel = HomeViewModel()
     private var allEmployees: [EmployeeElement] = [EmployeeElement]()
     private var cancellables = Set<AnyCancellable>()
-    var activityIndicator = UIActivityIndicatorView()
+    internal var activityIndicator = UIActivityIndicatorView()
 
+    // MARK: ViewLifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +34,7 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
         setupErrorView()
     }
     
+    // MARK: Private Functions
     private func setupPullToRefresh() {
         listTableView.refreshControl = UIRefreshControl()
         listTableView.refreshControl?.attributedTitle = NSAttributedString(string: Constants.Text.pullToRefresh)
@@ -99,6 +103,7 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     }
 }
 
+// MARK: UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeCell, for: indexPath) as? HomeTableViewCell
