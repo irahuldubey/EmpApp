@@ -8,13 +8,6 @@
 import Foundation
 import Combine
 
-// If we want to cancel the request from our application layer.
-public protocol Cancellable {
-    func cancel()
-}
-
-extension URLSessionTask: Cancellable {}
-
 protocol EmpServiceProtocol {
     func fetchEmpList<T: Codable>(modelType: T.Type, completionHandler: @escaping(Result<T>) -> Void)
 }

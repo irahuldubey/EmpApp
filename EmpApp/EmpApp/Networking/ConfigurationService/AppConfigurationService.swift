@@ -24,19 +24,36 @@ struct AppConfigurationService: AppConfigurationServiceProtocol {
     }
     
     var empDomain: String {
-        loadLocalConfiguration()[Keys.domain.rawValue] ?? ""
+        if loadRemoteConfiguration().isEmpty {
+            return loadLocalConfiguration()[Keys.domain.rawValue] ?? ""
+        } else {
+            return  loadRemoteConfiguration()[Keys.domain.rawValue] ?? ""
+        }
     }
     
     var empPath: String {
-        loadLocalConfiguration()[Keys.path.rawValue] ?? ""
+        if loadRemoteConfiguration().isEmpty {
+            return loadLocalConfiguration()[Keys.path.rawValue] ?? ""
+        } else {
+            return loadRemoteConfiguration()[Keys.path.rawValue] ?? ""
+        }
     }
 
     var empBadPath: String {
-        loadLocalConfiguration()[Keys.badPath.rawValue] ?? ""
+        if loadRemoteConfiguration().isEmpty {
+            return loadLocalConfiguration()[Keys.badPath.rawValue] ?? ""
+        } else {
+            return loadRemoteConfiguration()[Keys.badPath.rawValue] ?? ""
+        }
     }
     
     var empEmptyPath: String {
-        loadLocalConfiguration()[Keys.emptyPath.rawValue] ?? ""
+        if loadRemoteConfiguration().isEmpty {
+            return loadLocalConfiguration()[Keys.emptyPath.rawValue] ?? ""
+        } else {
+            return loadRemoteConfiguration()[Keys.emptyPath.rawValue] ?? ""
+        }
+
     }
     
     // Call the local cache get the configuration
