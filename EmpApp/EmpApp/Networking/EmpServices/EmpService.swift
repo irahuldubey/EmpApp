@@ -24,19 +24,23 @@ final class EmpService: EmpServiceProtocol{
     
     private let restService: RestService<EmpServiceOperation> = RestService()
     
-    enum Error: Swift.Error {
+    enum Error: Swift.Error, LocalizedError {
         case invalidResponse(Int)
         case parseError
+        
+        var errorDescription: String? {
+            switch self {
+            case .invalidResponse(let code):
+                if code == 404 {
+                    return "Received malformed data from service with code \(code), please try again later"
+                }
+            case .parseError:
+                return "Unable to parse service response"
+            }
+            return nil
+        }
     }
-    
-    private lazy var decoder: JSONDecoder = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(dateFormatter)
-        return decoder
-    }()
-    
+
     @discardableResult
     func fetchEmpList<T: Codable>(modelType: T.Type, completionHandler: @escaping(Result<T>) -> Void) -> Cancellable? {
         let empServiceOperation = EmpServiceOperation()
@@ -53,7 +57,7 @@ final class EmpService: EmpServiceProtocol{
                 case .success:
                     if let data = response.data {
                         do {
-                            let empListResponse = try self.decoder.decode(T.self, from: data)
+                            let empListResponse = try JSONDecoder().decode(T.self, from: data)
                             completionHandler(.success(empListResponse))
                         } catch {
                             completionHandler(.failure(error))

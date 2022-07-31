@@ -91,12 +91,14 @@ final internal class HomeTableViewCell: UITableViewCell {
               let urlString = URL(string: imageURL) else {
             return
         }
+        self.iconImageView.showLoading()
         let imageLoaderImage = ImageDownloadManager.shared.loadImage(from: urlString)
         let prefixImage: String = "Image:"
         cancellable = imageLoaderImage
                         .receive(on: DispatchQueue.main)
                         .sink { image in
                             self.iconImageView.image = image
+                            self.iconImageView.stopLoading()
                             self.iconImageView.accessibilityIdentifier = "\(prefixImage)\(model.uuid)"
                         }
     }

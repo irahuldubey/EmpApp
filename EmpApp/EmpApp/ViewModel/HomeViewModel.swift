@@ -12,6 +12,7 @@ final public class HomeViewModel {
     
     let employeeListPublisher: PassthroughSubject<Employees, Never> = .init()
     let shouldShowLoadingIndicator: CurrentValueSubject<Bool, Never> = .init(true)
+    let errorText: PassthroughSubject<String, Never> = .init()
 
     private var empService: EmpServiceProtocol
     
@@ -28,7 +29,9 @@ final public class HomeViewModel {
                     self.shouldShowLoadingIndicator.send(false)
                 }
             case .failure(let error):
-                debugPrint(error)
+                DispatchQueue.main.async {
+                    self.errorText.send(error.localizedDescription)
+                }
             }
         }
     }

@@ -19,5 +19,6 @@ struct Constants {
     
     struct Text {
         static let pullToRefresh = "Pull to refresh"
+        static let error = "We are unable to load the content right now, please try again later."
     }
 }

@@ -26,7 +26,7 @@ struct AppConfigurationService: AppConfigurationServiceProtocol {
     }
     
     var empPath: String {
-        loadLocalConfiguration()[Keys.path.rawValue] ?? ""
+        loadLocalConfiguration()[Keys.emptyPath.rawValue] ?? ""
     }
 
     // Call the local cache get the configuration

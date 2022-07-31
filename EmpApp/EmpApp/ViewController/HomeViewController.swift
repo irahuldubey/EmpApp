@@ -11,6 +11,9 @@ import CorePackage
 
 final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var errorView: UIView!
+    
     @IBOutlet weak var listTableView: UITableView!
     
     let viewModel: HomeViewModel = HomeViewModel()
@@ -26,6 +29,7 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
         setupNavigationTitle()
         setupActivityIndicator()
         setupPullToRefresh()
+        setupErrorView()
     }
     
     private func setupPullToRefresh() {
@@ -35,7 +39,11 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     }
  
     private func setupNavigationTitle() {
-        self.navigationItem.title = Constants.NavigationBarTitle.home
+        navigationItem.title = Constants.NavigationBarTitle.home
+    }
+    
+    private func setupErrorView() {
+        errorLabel.text = Constants.Text.error
     }
     
     private func setupActivityIndicator() {
@@ -52,6 +60,7 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
                 print(empList.employees)
                 self.allEmployees = empList.employees
                 self.listTableView.refreshControl?.endRefreshing()
+                self.shouldShowError(show: false)
                 self.listTableView.reloadData()
             }
             .store(in: &cancellables)
@@ -63,12 +72,36 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
                 self.removeLoadingIndicator()
             }
             .store(in: &cancellables)
+        
+        viewModel
+            .errorText
+            .receive(on: DispatchQueue.main)
+            .sink { errorText in
+                self.errorLabel.text = errorText
+                self.shouldShowError(show: true)
+            }
+            .store(in: &cancellables)
+        
+    }
+    
+    private func shouldShowError(show: Bool) {
+        if show {
+            self.view.bringSubviewToFront(self.errorView)
+            self.view.sendSubviewToBack(self.listTableView)
+        } else {
+            self.view.bringSubviewToFront(self.listTableView)
+            self.view.sendSubviewToBack(self.errorView)
+        }
     }
     
     @objc
     private func fetchEmployeeList() {
         allEmployees.removeAll()
         viewModel.fetchEmployeeList()
+    }
+    
+    deinit {
+        cancellables.removeAll()
     }
 }
 
