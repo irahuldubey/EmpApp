@@ -10,6 +10,8 @@ import Foundation
 protocol AppConfigurationServiceProtocol {
     var empDomain: String { get }
     var empPath: String { get }
+    var empBadPath: String { get  }
+    var empEmptyPath: String { get  }
 }
 
 struct AppConfigurationService: AppConfigurationServiceProtocol {

@@ -25,6 +25,9 @@
 		BB551FE82894FF2F0056A32D /* EmpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE72894FF2F0056A32D /* EmpService.swift */; };
 		BBC8DCFB2895259800B09141 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */; };
 		BBC8DCFE2895269000B09141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFD2895269000B09141 /* Constants.swift */; };
+		BBDAC131289635AA000E6A8B /* AppConfigurationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDAC130289635AA000E6A8B /* AppConfigurationServiceTests.swift */; };
+		BBDAC1342896387F000E6A8B /* MockAppConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDAC1332896387F000E6A8B /* MockAppConfigurationService.swift */; };
+		BBDAC13828963903000E6A8B /* EmpServiceOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDAC13728963903000E6A8B /* EmpServiceOperationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		BB551FE72894FF2F0056A32D /* EmpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpService.swift; sourceTree = "<group>"; };
 		BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBC8DCFD2895269000B09141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BBDAC130289635AA000E6A8B /* AppConfigurationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurationServiceTests.swift; sourceTree = "<group>"; };
+		BBDAC1332896387F000E6A8B /* MockAppConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppConfigurationService.swift; sourceTree = "<group>"; };
+		BBDAC13728963903000E6A8B /* EmpServiceOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpServiceOperationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,8 @@
 		BB551FA92894E39E0056A32D /* EmpAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				BBDAC1322896386F000E6A8B /* Mocks */,
+				BBDAC12F28963596000E6A8B /* Networking */,
 				BB551FAA2894E39E0056A32D /* EmpAppTests.swift */,
 			);
 			path = EmpAppTests;
@@ -231,6 +239,39 @@
 				BBC8DCFD2895269000B09141 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		BBDAC12F28963596000E6A8B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BBDAC136289638F0000E6A8B /* EmpServiceTests */,
+				BBDAC135289638E6000E6A8B /* ConfigurationServiceTests */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BBDAC1322896386F000E6A8B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BBDAC1332896387F000E6A8B /* MockAppConfigurationService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BBDAC135289638E6000E6A8B /* ConfigurationServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBDAC130289635AA000E6A8B /* AppConfigurationServiceTests.swift */,
+			);
+			path = ConfigurationServiceTests;
+			sourceTree = "<group>";
+		};
+		BBDAC136289638F0000E6A8B /* EmpServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBDAC13728963903000E6A8B /* EmpServiceOperationTests.swift */,
+			);
+			path = EmpServiceTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,7 +426,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDAC13828963903000E6A8B /* EmpServiceOperationTests.swift in Sources */,
+				BBDAC131289635AA000E6A8B /* AppConfigurationServiceTests.swift in Sources */,
 				BB551FAB2894E39E0056A32D /* EmpAppTests.swift in Sources */,
+				BBDAC1342896387F000E6A8B /* MockAppConfigurationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
