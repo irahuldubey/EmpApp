@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RestServicePackage
+import CorePackage
 
 struct EmpServiceOperation: RestServiceOperation {
     

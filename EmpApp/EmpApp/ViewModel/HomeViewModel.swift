@@ -10,10 +10,9 @@ import Combine
 
 final public class HomeViewModel {
     
-    @Published var isLoading: Bool = false
-    @Published var empListResponse: Employees?
-    
-    
+    let employeeListPublisher: PassthroughSubject<Employees, Never> = .init()
+    let shouldShowLoadingIndicator: CurrentValueSubject<Bool, Never> = .init(true)
+
     private var empService: EmpServiceProtocol
     
     init(with empService: EmpServiceProtocol = EmpService()) {
@@ -21,10 +20,13 @@ final public class HomeViewModel {
     }
 
     func fetchEmployeeList() {
-        self.empService.fetchEmpList(modelType: Employees.self) { result in
+        empService.fetchEmpList(modelType: Employees.self) { result in
             switch result {
             case .success(let employees):
-                debugPrint("EMP", employees)
+                DispatchQueue.main.async {
+                    self.employeeListPublisher.send(employees)
+                    self.shouldShowLoadingIndicator.send(false)
+                }
             case .failure(let error):
                 debugPrint(error)
             }

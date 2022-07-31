@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-import RestServicePackage
+import CorePackage
 
 // If we want to cancel the request from our application layer.
 public protocol Cancellable {
