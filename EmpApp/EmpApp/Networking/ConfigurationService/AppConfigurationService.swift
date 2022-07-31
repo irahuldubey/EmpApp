@@ -26,9 +26,17 @@ struct AppConfigurationService: AppConfigurationServiceProtocol {
     }
     
     var empPath: String {
-        loadLocalConfiguration()[Keys.emptyPath.rawValue] ?? ""
+        loadLocalConfiguration()[Keys.path.rawValue] ?? ""
     }
 
+    var empBadPath: String {
+        loadLocalConfiguration()[Keys.badPath.rawValue] ?? ""
+    }
+    
+    var empEmptyPath: String {
+        loadLocalConfiguration()[Keys.emptyPath.rawValue] ?? ""
+    }
+    
     // Call the local cache get the configuration
     func loadLocalConfiguration() -> [String: String] {
         var configDictionary = [String: String]()
