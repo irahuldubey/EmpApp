@@ -76,7 +76,6 @@
 		BB8A07E0289738D000ABE684 /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07DB2897389300ABE684 /* EmployeeType.swift */; };
 		BB8A07E22897395200ABE684 /* EmployeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07E12897395200ABE684 /* EmployeeTests.swift */; };
 		BB8A07E528973A6600ABE684 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07E428973A6600ABE684 /* HomeViewControllerTests.swift */; };
-		BB8A07E628973B3E00ABE684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB551F992894E39C0056A32D /* Main.storyboard */; };
 		BBC8DCFB2895259800B09141 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */; };
 		BBC8DCFE2895269000B09141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFD2895269000B09141 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -598,7 +597,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB8A07E628973B3E00ABE684 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
