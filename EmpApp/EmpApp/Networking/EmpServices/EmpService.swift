@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import CorePackage
 
 // If we want to cancel the request from our application layer.
 public protocol Cancellable {
@@ -17,12 +16,18 @@ public protocol Cancellable {
 extension URLSessionTask: Cancellable {}
 
 protocol EmpServiceProtocol {
-    func fetchEmpList<T: Codable>(modelType: T.Type, completionHandler: @escaping(Result<T>) -> Void) -> Cancellable?
+    func fetchEmpList<T: Codable>(modelType: T.Type, completionHandler: @escaping(Result<T>) -> Void)
 }
 
-final class EmpService: EmpServiceProtocol{
+final class EmpService: EmpServiceProtocol {
     
-    private let restService: RestService<EmpServiceOperation> = RestService()
+    private let restService: RestService<EmpServiceOperation>
+    private let empServiceOperation: RestServiceOperation
+    
+    init(with service: RestService<EmpServiceOperation> = RestService(), operation: RestServiceOperation = EmpServiceOperation()) {
+        self.restService = service
+        self.empServiceOperation = operation
+    }
     
     enum Error: Swift.Error, LocalizedError {
         case invalidResponse(Int)
@@ -41,9 +46,7 @@ final class EmpService: EmpServiceProtocol{
         }
     }
 
-    @discardableResult
-    func fetchEmpList<T: Codable>(modelType: T.Type, completionHandler: @escaping(Result<T>) -> Void) -> Cancellable? {
-        let empServiceOperation = EmpServiceOperation()
+    func fetchEmpList<T: Codable>(modelType: T.Type, completionHandler: @escaping(Result<T>) -> Void) {
         return restService.performRestServiceOperation(empServiceOperation) { (result) in
             switch result {
             case .success(let response):

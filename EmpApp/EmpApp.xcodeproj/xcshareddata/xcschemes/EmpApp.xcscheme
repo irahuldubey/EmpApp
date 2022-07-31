@@ -27,8 +27,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      codeCoverageEnabled = "YES">
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -43,19 +42,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BB551FA52894E39E0056A32D"
+               BlueprintIdentifier = "BB8A074F289728E100ABE684"
                BuildableName = "EmpAppTests.xctest"
                BlueprintName = "EmpAppTests"
-               ReferencedContainer = "container:EmpApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BB551FAF2894E39E0056A32D"
-               BuildableName = "EmpAppUITests.xctest"
-               BlueprintName = "EmpAppUITests"
                ReferencedContainer = "container:EmpApp.xcodeproj">
             </BuildableReference>
          </TestableReference>

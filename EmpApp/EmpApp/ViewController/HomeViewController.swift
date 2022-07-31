@@ -7,7 +7,6 @@
 
 import UIKit
 import Combine
-import CorePackage
 
 final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     
@@ -27,7 +26,6 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
         configureListeners()
         fetchEmployeeList()
         setupNavigationTitle()
-        setupActivityIndicator()
         setupPullToRefresh()
         setupErrorView()
     }
@@ -91,6 +89,7 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     @objc
     private func fetchEmployeeList() {
         allEmployees.removeAll()
+        setupActivityIndicator()
         viewModel.fetchEmployeeList()
     }
     

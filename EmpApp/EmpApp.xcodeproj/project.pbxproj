@@ -7,38 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB0681312895DDCC00B61C44 /* CorePackage in Resources */ = {isa = PBXBuildFile; fileRef = BB0681302895DDCC00B61C44 /* CorePackage */; };
-		BB0681332895DDD800B61C44 /* CorePackage in Frameworks */ = {isa = PBXBuildFile; productRef = BB0681322895DDD800B61C44 /* CorePackage */; };
 		BB551F942894E39C0056A32D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551F932894E39C0056A32D /* AppDelegate.swift */; };
 		BB551F962894E39C0056A32D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551F952894E39C0056A32D /* SceneDelegate.swift */; };
 		BB551F982894E39C0056A32D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551F972894E39C0056A32D /* HomeViewController.swift */; };
 		BB551F9B2894E39C0056A32D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB551F992894E39C0056A32D /* Main.storyboard */; };
 		BB551F9D2894E39D0056A32D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB551F9C2894E39D0056A32D /* Assets.xcassets */; };
 		BB551FA02894E39D0056A32D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB551F9E2894E39D0056A32D /* LaunchScreen.storyboard */; };
-		BB551FAB2894E39E0056A32D /* EmpAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FAA2894E39E0056A32D /* EmpAppTests.swift */; };
-		BB551FB52894E39E0056A32D /* EmpAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FB42894E39E0056A32D /* EmpAppUITests.swift */; };
-		BB551FB72894E39E0056A32D /* EmpAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FB62894E39E0056A32D /* EmpAppUITestsLaunchTests.swift */; };
 		BB551FC82894E6660056A32D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FC72894E6660056A32D /* HomeViewModel.swift */; };
 		BB551FCB2894EC770056A32D /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FCA2894EC770056A32D /* Employee.swift */; };
 		BB551FE12894F7740056A32D /* EmpServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE02894F7740056A32D /* EmpServiceOperation.swift */; };
 		BB551FE42894F7D40056A32D /* AppConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE32894F7D40056A32D /* AppConfigurationService.swift */; };
 		BB551FE82894FF2F0056A32D /* EmpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE72894FF2F0056A32D /* EmpService.swift */; };
+		BB8A0753289728E100ABE684 /* ConstantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A0752289728E100ABE684 /* ConstantTests.swift */; };
+		BB8A076728972D0C00ABE684 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFD2895269000B09141 /* Constants.swift */; };
+		BB8A07872897313100ABE684 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07862897313100ABE684 /* RestService.swift */; };
+		BB8A078A2897313A00ABE684 /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07882897313A00ABE684 /* RestError.swift */; };
+		BB8A078B2897313A00ABE684 /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07882897313A00ABE684 /* RestError.swift */; };
+		BB8A078C2897313A00ABE684 /* RestServiceResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07892897313A00ABE684 /* RestServiceResponseError.swift */; };
+		BB8A078D2897313A00ABE684 /* RestServiceResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07892897313A00ABE684 /* RestServiceResponseError.swift */; };
+		BB8A078E2897313E00ABE684 /* RestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07862897313100ABE684 /* RestService.swift */; };
+		BB8A07952897314900ABE684 /* RestServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A078F2897314900ABE684 /* RestServiceOperation.swift */; };
+		BB8A07962897314900ABE684 /* RestServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A078F2897314900ABE684 /* RestServiceOperation.swift */; };
+		BB8A07972897314900ABE684 /* RestServiceRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07902897314900ABE684 /* RestServiceRequestConfiguration.swift */; };
+		BB8A07982897314900ABE684 /* RestServiceRequestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07902897314900ABE684 /* RestServiceRequestConfiguration.swift */; };
+		BB8A07992897314900ABE684 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07912897314900ABE684 /* Results.swift */; };
+		BB8A079A2897314900ABE684 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07912897314900ABE684 /* Results.swift */; };
+		BB8A079B2897314900ABE684 /* HTTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07922897314900ABE684 /* HTTPProtocol.swift */; };
+		BB8A079C2897314900ABE684 /* HTTPProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07922897314900ABE684 /* HTTPProtocol.swift */; };
+		BB8A079D2897314900ABE684 /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07932897314900ABE684 /* HTTPContentType.swift */; };
+		BB8A079E2897314900ABE684 /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07932897314900ABE684 /* HTTPContentType.swift */; };
+		BB8A079F2897314900ABE684 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07942897314900ABE684 /* HTTPMethod.swift */; };
+		BB8A07A02897314900ABE684 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07942897314900ABE684 /* HTTPMethod.swift */; };
+		BB8A07A22897315500ABE684 /* RestServiceResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07A12897315500ABE684 /* RestServiceResponseHandler.swift */; };
+		BB8A07A32897315500ABE684 /* RestServiceResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07A12897315500ABE684 /* RestServiceResponseHandler.swift */; };
+		BB8A07A52897315E00ABE684 /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07A42897315E00ABE684 /* ImageDownloadManager.swift */; };
+		BB8A07A62897315E00ABE684 /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07A42897315E00ABE684 /* ImageDownloadManager.swift */; };
+		BB8A07A92897316900ABE684 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07A72897316900ABE684 /* UIView+Extension.swift */; };
+		BB8A07AA2897316900ABE684 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07A72897316900ABE684 /* UIView+Extension.swift */; };
+		BB8A07AB2897316900ABE684 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07A82897316900ABE684 /* UIImage+Extension.swift */; };
+		BB8A07AC2897316900ABE684 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07A82897316900ABE684 /* UIImage+Extension.swift */; };
+		BB8A07B02897317C00ABE684 /* CacheConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07AE2897317C00ABE684 /* CacheConfig.swift */; };
+		BB8A07B12897317C00ABE684 /* CacheConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07AE2897317C00ABE684 /* CacheConfig.swift */; };
+		BB8A07B22897317C00ABE684 /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07AF2897317C00ABE684 /* CacheProtocol.swift */; };
+		BB8A07B32897317C00ABE684 /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07AF2897317C00ABE684 /* CacheProtocol.swift */; };
+		BB8A07B72897318A00ABE684 /* FileCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07B52897318A00ABE684 /* FileCacheProvider.swift */; };
+		BB8A07B82897318A00ABE684 /* FileCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07B52897318A00ABE684 /* FileCacheProvider.swift */; };
+		BB8A07B92897318A00ABE684 /* MemoryCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07B62897318A00ABE684 /* MemoryCacheProvider.swift */; };
+		BB8A07BA2897318A00ABE684 /* MemoryCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07B62897318A00ABE684 /* MemoryCacheProvider.swift */; };
+		BB8A07BD2897319600ABE684 /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07BC2897319600ABE684 /* CacheType.swift */; };
+		BB8A07BE2897319600ABE684 /* CacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07BC2897319600ABE684 /* CacheType.swift */; };
+		BB8A07C0289731A400ABE684 /* ActivityIndicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07BF289731A400ABE684 /* ActivityIndicatorProtocol.swift */; };
+		BB8A07C1289731A400ABE684 /* ActivityIndicatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07BF289731A400ABE684 /* ActivityIndicatorProtocol.swift */; };
+		BB8A07C2289731AF00ABE684 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */; };
+		BB8A07C3289731B100ABE684 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FCA2894EC770056A32D /* Employee.swift */; };
+		BB8A07C4289731B500ABE684 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551F972894E39C0056A32D /* HomeViewController.swift */; };
+		BB8A07C5289731B800ABE684 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FC72894E6660056A32D /* HomeViewModel.swift */; };
+		BB8A07C6289731BC00ABE684 /* AppConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE32894F7D40056A32D /* AppConfigurationService.swift */; };
+		BB8A07C7289731BE00ABE684 /* EmpServiceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE02894F7740056A32D /* EmpServiceOperation.swift */; };
+		BB8A07C8289731C100ABE684 /* EmpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB551FE72894FF2F0056A32D /* EmpService.swift */; };
+		BB8A07CE2897329E00ABE684 /* MockAppConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07CB2897329E00ABE684 /* MockAppConfigurationService.swift */; };
+		BB8A07CF2897329E00ABE684 /* MockEmpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07CC2897329E00ABE684 /* MockEmpService.swift */; };
+		BB8A07D02897329E00ABE684 /* MockEmpServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07CD2897329E00ABE684 /* MockEmpServiceConfiguration.swift */; };
+		BB8A07D4289732BB00ABE684 /* AppConfigurationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07D3289732BB00ABE684 /* AppConfigurationServiceTests.swift */; };
+		BB8A07D7289732CB00ABE684 /* EmpServiceOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07D6289732CB00ABE684 /* EmpServiceOperationTests.swift */; };
+		BB8A07DA289732DE00ABE684 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07D9289732DE00ABE684 /* HomeViewModelTests.swift */; };
 		BBC8DCFB2895259800B09141 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */; };
 		BBC8DCFE2895269000B09141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFD2895269000B09141 /* Constants.swift */; };
-		BBDAC131289635AA000E6A8B /* AppConfigurationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDAC130289635AA000E6A8B /* AppConfigurationServiceTests.swift */; };
-		BBDAC1342896387F000E6A8B /* MockAppConfigurationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDAC1332896387F000E6A8B /* MockAppConfigurationService.swift */; };
-		BBDAC13828963903000E6A8B /* EmpServiceOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDAC13728963903000E6A8B /* EmpServiceOperationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BB551FA72894E39E0056A32D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB551F882894E39C0056A32D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB551F8F2894E39C0056A32D;
-			remoteInfo = EmpApp;
-		};
-		BB551FB12894E39E0056A32D /* PBXContainerItemProxy */ = {
+		BB8A0754289728E100ABE684 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BB551F882894E39C0056A32D /* Project object */;
 			proxyType = 1;
@@ -48,7 +86,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB0681302895DDCC00B61C44 /* CorePackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CorePackage; path = ../../../../../Desktop/CorePackage; sourceTree = "<group>"; };
 		BB551F902894E39C0056A32D /* EmpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB551F932894E39C0056A32D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB551F952894E39C0056A32D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,21 +94,40 @@
 		BB551F9C2894E39D0056A32D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB551F9F2894E39D0056A32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB551FA12894E39D0056A32D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB551FA62894E39E0056A32D /* EmpAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmpAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB551FAA2894E39E0056A32D /* EmpAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpAppTests.swift; sourceTree = "<group>"; };
-		BB551FB02894E39E0056A32D /* EmpAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmpAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB551FB42894E39E0056A32D /* EmpAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpAppUITests.swift; sourceTree = "<group>"; };
-		BB551FB62894E39E0056A32D /* EmpAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB551FC72894E6660056A32D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BB551FCA2894EC770056A32D /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		BB551FE02894F7740056A32D /* EmpServiceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpServiceOperation.swift; sourceTree = "<group>"; };
 		BB551FE32894F7D40056A32D /* AppConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurationService.swift; sourceTree = "<group>"; };
 		BB551FE72894FF2F0056A32D /* EmpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpService.swift; sourceTree = "<group>"; };
+		BB8A0750289728E100ABE684 /* EmpAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmpAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8A0752289728E100ABE684 /* ConstantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantTests.swift; sourceTree = "<group>"; };
+		BB8A07862897313100ABE684 /* RestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestService.swift; sourceTree = "<group>"; };
+		BB8A07882897313A00ABE684 /* RestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestError.swift; sourceTree = "<group>"; };
+		BB8A07892897313A00ABE684 /* RestServiceResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestServiceResponseError.swift; sourceTree = "<group>"; };
+		BB8A078F2897314900ABE684 /* RestServiceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestServiceOperation.swift; sourceTree = "<group>"; };
+		BB8A07902897314900ABE684 /* RestServiceRequestConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestServiceRequestConfiguration.swift; sourceTree = "<group>"; };
+		BB8A07912897314900ABE684 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		BB8A07922897314900ABE684 /* HTTPProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPProtocol.swift; sourceTree = "<group>"; };
+		BB8A07932897314900ABE684 /* HTTPContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPContentType.swift; sourceTree = "<group>"; };
+		BB8A07942897314900ABE684 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		BB8A07A12897315500ABE684 /* RestServiceResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestServiceResponseHandler.swift; sourceTree = "<group>"; };
+		BB8A07A42897315E00ABE684 /* ImageDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadManager.swift; sourceTree = "<group>"; };
+		BB8A07A72897316900ABE684 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		BB8A07A82897316900ABE684 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		BB8A07AE2897317C00ABE684 /* CacheConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheConfig.swift; sourceTree = "<group>"; };
+		BB8A07AF2897317C00ABE684 /* CacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
+		BB8A07B52897318A00ABE684 /* FileCacheProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileCacheProvider.swift; sourceTree = "<group>"; };
+		BB8A07B62897318A00ABE684 /* MemoryCacheProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCacheProvider.swift; sourceTree = "<group>"; };
+		BB8A07BC2897319600ABE684 /* CacheType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheType.swift; sourceTree = "<group>"; };
+		BB8A07BF289731A400ABE684 /* ActivityIndicatorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorProtocol.swift; sourceTree = "<group>"; };
+		BB8A07CB2897329E00ABE684 /* MockAppConfigurationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAppConfigurationService.swift; sourceTree = "<group>"; };
+		BB8A07CC2897329E00ABE684 /* MockEmpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEmpService.swift; sourceTree = "<group>"; };
+		BB8A07CD2897329E00ABE684 /* MockEmpServiceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEmpServiceConfiguration.swift; sourceTree = "<group>"; };
+		BB8A07D3289732BB00ABE684 /* AppConfigurationServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigurationServiceTests.swift; sourceTree = "<group>"; };
+		BB8A07D6289732CB00ABE684 /* EmpServiceOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmpServiceOperationTests.swift; sourceTree = "<group>"; };
+		BB8A07D9289732DE00ABE684 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBC8DCFD2895269000B09141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		BBDAC130289635AA000E6A8B /* AppConfigurationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurationServiceTests.swift; sourceTree = "<group>"; };
-		BBDAC1332896387F000E6A8B /* MockAppConfigurationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppConfigurationService.swift; sourceTree = "<group>"; };
-		BBDAC13728963903000E6A8B /* EmpServiceOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpServiceOperationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,18 +135,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0681332895DDD800B61C44 /* CorePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB551FA32894E39E0056A32D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB551FAD2894E39E0056A32D /* Frameworks */ = {
+		BB8A074D289728E100ABE684 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -103,10 +151,8 @@
 		BB551F872894E39C0056A32D = {
 			isa = PBXGroup;
 			children = (
-				BBC8DCF028951CA400B09141 /* Packages */,
 				BB551F922894E39C0056A32D /* EmpApp */,
-				BB551FA92894E39E0056A32D /* EmpAppTests */,
-				BB551FB32894E39E0056A32D /* EmpAppUITests */,
+				BB8A0751289728E100ABE684 /* EmpAppTests */,
 				BB551F912894E39C0056A32D /* Products */,
 				BBC8DCF328951CDE00B09141 /* Frameworks */,
 			);
@@ -116,8 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				BB551F902894E39C0056A32D /* EmpApp.app */,
-				BB551FA62894E39E0056A32D /* EmpAppTests.xctest */,
-				BB551FB02894E39E0056A32D /* EmpAppUITests.xctest */,
+				BB8A0750289728E100ABE684 /* EmpAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,39 +170,19 @@
 		BB551F922894E39C0056A32D /* EmpApp */ = {
 			isa = PBXGroup;
 			children = (
+				BB8A076B28972D6600ABE684 /* Resources */,
+				BB8A076928972D2300ABE684 /* Storyboard */,
+				BB8A076828972D1600ABE684 /* AppDelegate */,
+				BB8A070C2897250900ABE684 /* Abstractions */,
 				BBC8DCFC2895268600B09141 /* Constants */,
 				BBC8DCF92895257800B09141 /* Views */,
 				BB551FC92894EC6D0056A32D /* DataModel */,
 				BB551FC42894E3E00056A32D /* ViewController */,
 				BB551FC32894E3D60056A32D /* ViewModel */,
 				BB551FC62894E6170056A32D /* Networking */,
-				BB551F932894E39C0056A32D /* AppDelegate.swift */,
-				BB551F952894E39C0056A32D /* SceneDelegate.swift */,
-				BB551F992894E39C0056A32D /* Main.storyboard */,
-				BB551F9C2894E39D0056A32D /* Assets.xcassets */,
-				BB551F9E2894E39D0056A32D /* LaunchScreen.storyboard */,
 				BB551FA12894E39D0056A32D /* Info.plist */,
 			);
 			path = EmpApp;
-			sourceTree = "<group>";
-		};
-		BB551FA92894E39E0056A32D /* EmpAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				BBDAC1322896386F000E6A8B /* Mocks */,
-				BBDAC12F28963596000E6A8B /* Networking */,
-				BB551FAA2894E39E0056A32D /* EmpAppTests.swift */,
-			);
-			path = EmpAppTests;
-			sourceTree = "<group>";
-		};
-		BB551FB32894E39E0056A32D /* EmpAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BB551FB42894E39E0056A32D /* EmpAppUITests.swift */,
-				BB551FB62894E39E0056A32D /* EmpAppUITestsLaunchTests.swift */,
-			);
-			path = EmpAppUITests;
 			sourceTree = "<group>";
 		};
 		BB551FC32894E3D60056A32D /* ViewModel */ = {
@@ -202,12 +227,222 @@
 			path = EmpServices;
 			sourceTree = "<group>";
 		};
-		BBC8DCF028951CA400B09141 /* Packages */ = {
+		BB8A070C2897250900ABE684 /* Abstractions */ = {
 			isa = PBXGroup;
 			children = (
-				BB0681302895DDCC00B61C44 /* CorePackage */,
+				BB8A077C289730D900ABE684 /* Core */,
 			);
-			path = Packages;
+			path = Abstractions;
+			sourceTree = "<group>";
+		};
+		BB8A0751289728E100ABE684 /* EmpAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07D8289732D500ABE684 /* ViewModel */,
+				BB8A07D1289732AC00ABE684 /* Networking */,
+				BB8A07CA2897329600ABE684 /* Mocks */,
+				BB8A07C92897320700ABE684 /* Constants */,
+			);
+			path = EmpAppTests;
+			sourceTree = "<group>";
+		};
+		BB8A076828972D1600ABE684 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BB551F932894E39C0056A32D /* AppDelegate.swift */,
+				BB551F952894E39C0056A32D /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		BB8A076928972D2300ABE684 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BB551F9E2894E39D0056A32D /* LaunchScreen.storyboard */,
+				BB551F992894E39C0056A32D /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BB8A076B28972D6600ABE684 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB551F9C2894E39D0056A32D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BB8A077C289730D900ABE684 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07812897310A00ABE684 /* Networking */,
+				BB8A07802897310400ABE684 /* Managers */,
+				BB8A077F2897310000ABE684 /* Extensions */,
+				BB8A077E289730F800ABE684 /* CacheManager */,
+				BB8A077D289730E300ABE684 /* ActivityControl */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BB8A077D289730E300ABE684 /* ActivityControl */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07BF289731A400ABE684 /* ActivityIndicatorProtocol.swift */,
+			);
+			path = ActivityControl;
+			sourceTree = "<group>";
+		};
+		BB8A077E289730F800ABE684 /* CacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07BB2897319000ABE684 /* Types */,
+				BB8A07B42897317F00ABE684 /* Providers */,
+				BB8A07AD2897317200ABE684 /* Confgurations */,
+			);
+			path = CacheManager;
+			sourceTree = "<group>";
+		};
+		BB8A077F2897310000ABE684 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07A82897316900ABE684 /* UIImage+Extension.swift */,
+				BB8A07A72897316900ABE684 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BB8A07802897310400ABE684 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07A42897315E00ABE684 /* ImageDownloadManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		BB8A07812897310A00ABE684 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07852897312800ABE684 /* RestService */,
+				BB8A07842897312300ABE684 /* RestError */,
+				BB8A07832897311E00ABE684 /* RestConfiguration */,
+				BB8A07822897311500ABE684 /* ResponseHandlers */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BB8A07822897311500ABE684 /* ResponseHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07A12897315500ABE684 /* RestServiceResponseHandler.swift */,
+			);
+			path = ResponseHandlers;
+			sourceTree = "<group>";
+		};
+		BB8A07832897311E00ABE684 /* RestConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07932897314900ABE684 /* HTTPContentType.swift */,
+				BB8A07942897314900ABE684 /* HTTPMethod.swift */,
+				BB8A07922897314900ABE684 /* HTTPProtocol.swift */,
+				BB8A078F2897314900ABE684 /* RestServiceOperation.swift */,
+				BB8A07902897314900ABE684 /* RestServiceRequestConfiguration.swift */,
+				BB8A07912897314900ABE684 /* Results.swift */,
+			);
+			path = RestConfiguration;
+			sourceTree = "<group>";
+		};
+		BB8A07842897312300ABE684 /* RestError */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07882897313A00ABE684 /* RestError.swift */,
+				BB8A07892897313A00ABE684 /* RestServiceResponseError.swift */,
+			);
+			path = RestError;
+			sourceTree = "<group>";
+		};
+		BB8A07852897312800ABE684 /* RestService */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07862897313100ABE684 /* RestService.swift */,
+			);
+			path = RestService;
+			sourceTree = "<group>";
+		};
+		BB8A07AD2897317200ABE684 /* Confgurations */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07AE2897317C00ABE684 /* CacheConfig.swift */,
+				BB8A07AF2897317C00ABE684 /* CacheProtocol.swift */,
+			);
+			path = Confgurations;
+			sourceTree = "<group>";
+		};
+		BB8A07B42897317F00ABE684 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07B52897318A00ABE684 /* FileCacheProvider.swift */,
+				BB8A07B62897318A00ABE684 /* MemoryCacheProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		BB8A07BB2897319000ABE684 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07BC2897319600ABE684 /* CacheType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		BB8A07C92897320700ABE684 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A0752289728E100ABE684 /* ConstantTests.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		BB8A07CA2897329600ABE684 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07CB2897329E00ABE684 /* MockAppConfigurationService.swift */,
+				BB8A07CC2897329E00ABE684 /* MockEmpService.swift */,
+				BB8A07CD2897329E00ABE684 /* MockEmpServiceConfiguration.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BB8A07D1289732AC00ABE684 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07D5289732C300ABE684 /* EmpServiceTests */,
+				BB8A07D2289732B400ABE684 /* ConfigurationServiceTests */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BB8A07D2289732B400ABE684 /* ConfigurationServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07D3289732BB00ABE684 /* AppConfigurationServiceTests.swift */,
+			);
+			path = ConfigurationServiceTests;
+			sourceTree = "<group>";
+		};
+		BB8A07D5289732C300ABE684 /* EmpServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07D6289732CB00ABE684 /* EmpServiceOperationTests.swift */,
+			);
+			path = EmpServiceTests;
+			sourceTree = "<group>";
+		};
+		BB8A07D8289732D500ABE684 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07D9289732DE00ABE684 /* HomeViewModelTests.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BBC8DCF328951CDE00B09141 /* Frameworks */ = {
@@ -241,39 +476,6 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		BBDAC12F28963596000E6A8B /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				BBDAC136289638F0000E6A8B /* EmpServiceTests */,
-				BBDAC135289638E6000E6A8B /* ConfigurationServiceTests */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		BBDAC1322896386F000E6A8B /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				BBDAC1332896387F000E6A8B /* MockAppConfigurationService.swift */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		BBDAC135289638E6000E6A8B /* ConfigurationServiceTests */ = {
-			isa = PBXGroup;
-			children = (
-				BBDAC130289635AA000E6A8B /* AppConfigurationServiceTests.swift */,
-			);
-			path = ConfigurationServiceTests;
-			sourceTree = "<group>";
-		};
-		BBDAC136289638F0000E6A8B /* EmpServiceTests */ = {
-			isa = PBXGroup;
-			children = (
-				BBDAC13728963903000E6A8B /* EmpServiceOperationTests.swift */,
-			);
-			path = EmpServiceTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,47 +493,28 @@
 			);
 			name = EmpApp;
 			packageProductDependencies = (
-				BB0681322895DDD800B61C44 /* CorePackage */,
 			);
 			productName = EmpApp;
 			productReference = BB551F902894E39C0056A32D /* EmpApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BB551FA52894E39E0056A32D /* EmpAppTests */ = {
+		BB8A074F289728E100ABE684 /* EmpAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB551FBD2894E39E0056A32D /* Build configuration list for PBXNativeTarget "EmpAppTests" */;
+			buildConfigurationList = BB8A0756289728E100ABE684 /* Build configuration list for PBXNativeTarget "EmpAppTests" */;
 			buildPhases = (
-				BB551FA22894E39E0056A32D /* Sources */,
-				BB551FA32894E39E0056A32D /* Frameworks */,
-				BB551FA42894E39E0056A32D /* Resources */,
+				BB8A074C289728E100ABE684 /* Sources */,
+				BB8A074D289728E100ABE684 /* Frameworks */,
+				BB8A074E289728E100ABE684 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BB551FA82894E39E0056A32D /* PBXTargetDependency */,
+				BB8A0755289728E100ABE684 /* PBXTargetDependency */,
 			);
 			name = EmpAppTests;
 			productName = EmpAppTests;
-			productReference = BB551FA62894E39E0056A32D /* EmpAppTests.xctest */;
+			productReference = BB8A0750289728E100ABE684 /* EmpAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BB551FAF2894E39E0056A32D /* EmpAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB551FC02894E39E0056A32D /* Build configuration list for PBXNativeTarget "EmpAppUITests" */;
-			buildPhases = (
-				BB551FAC2894E39E0056A32D /* Sources */,
-				BB551FAD2894E39E0056A32D /* Frameworks */,
-				BB551FAE2894E39E0056A32D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB551FB22894E39E0056A32D /* PBXTargetDependency */,
-			);
-			name = EmpAppUITests;
-			productName = EmpAppUITests;
-			productReference = BB551FB02894E39E0056A32D /* EmpAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -346,13 +529,8 @@
 					BB551F8F2894E39C0056A32D = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
-					BB551FA52894E39E0056A32D = {
+					BB8A074F289728E100ABE684 = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = BB551F8F2894E39C0056A32D;
-					};
-					BB551FAF2894E39E0056A32D = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = BB551F8F2894E39C0056A32D;
 					};
 				};
 			};
@@ -370,8 +548,7 @@
 			projectRoot = "";
 			targets = (
 				BB551F8F2894E39C0056A32D /* EmpApp */,
-				BB551FA52894E39E0056A32D /* EmpAppTests */,
-				BB551FAF2894E39E0056A32D /* EmpAppUITests */,
+				BB8A074F289728E100ABE684 /* EmpAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -381,21 +558,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB0681312895DDCC00B61C44 /* CorePackage in Resources */,
 				BB551FA02894E39D0056A32D /* LaunchScreen.storyboard in Resources */,
 				BB551F9D2894E39D0056A32D /* Assets.xcassets in Resources */,
 				BB551F9B2894E39C0056A32D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB551FA42894E39E0056A32D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB551FAE2894E39E0056A32D /* Resources */ = {
+		BB8A074E289728E100ABE684 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -409,51 +578,86 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8A07A92897316900ABE684 /* UIView+Extension.swift in Sources */,
+				BB8A079F2897314900ABE684 /* HTTPMethod.swift in Sources */,
 				BB551F982894E39C0056A32D /* HomeViewController.swift in Sources */,
+				BB8A07952897314900ABE684 /* RestServiceOperation.swift in Sources */,
 				BB551F942894E39C0056A32D /* AppDelegate.swift in Sources */,
+				BB8A07C0289731A400ABE684 /* ActivityIndicatorProtocol.swift in Sources */,
+				BB8A07B92897318A00ABE684 /* MemoryCacheProvider.swift in Sources */,
 				BB551FE42894F7D40056A32D /* AppConfigurationService.swift in Sources */,
 				BB551F962894E39C0056A32D /* SceneDelegate.swift in Sources */,
+				BB8A07A52897315E00ABE684 /* ImageDownloadManager.swift in Sources */,
+				BB8A078C2897313A00ABE684 /* RestServiceResponseError.swift in Sources */,
+				BB8A07AB2897316900ABE684 /* UIImage+Extension.swift in Sources */,
 				BB551FCB2894EC770056A32D /* Employee.swift in Sources */,
 				BBC8DCFE2895269000B09141 /* Constants.swift in Sources */,
+				BB8A078A2897313A00ABE684 /* RestError.swift in Sources */,
 				BBC8DCFB2895259800B09141 /* HomeCollectionViewCell.swift in Sources */,
+				BB8A07B22897317C00ABE684 /* CacheProtocol.swift in Sources */,
+				BB8A07B02897317C00ABE684 /* CacheConfig.swift in Sources */,
+				BB8A07992897314900ABE684 /* Results.swift in Sources */,
 				BB551FE12894F7740056A32D /* EmpServiceOperation.swift in Sources */,
 				BB551FE82894FF2F0056A32D /* EmpService.swift in Sources */,
+				BB8A07B72897318A00ABE684 /* FileCacheProvider.swift in Sources */,
+				BB8A079D2897314900ABE684 /* HTTPContentType.swift in Sources */,
+				BB8A079B2897314900ABE684 /* HTTPProtocol.swift in Sources */,
+				BB8A07872897313100ABE684 /* RestService.swift in Sources */,
+				BB8A07BD2897319600ABE684 /* CacheType.swift in Sources */,
 				BB551FC82894E6660056A32D /* HomeViewModel.swift in Sources */,
+				BB8A07A22897315500ABE684 /* RestServiceResponseHandler.swift in Sources */,
+				BB8A07972897314900ABE684 /* RestServiceRequestConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB551FA22894E39E0056A32D /* Sources */ = {
+		BB8A074C289728E100ABE684 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDAC13828963903000E6A8B /* EmpServiceOperationTests.swift in Sources */,
-				BBDAC131289635AA000E6A8B /* AppConfigurationServiceTests.swift in Sources */,
-				BB551FAB2894E39E0056A32D /* EmpAppTests.swift in Sources */,
-				BBDAC1342896387F000E6A8B /* MockAppConfigurationService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB551FAC2894E39E0056A32D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB551FB52894E39E0056A32D /* EmpAppUITests.swift in Sources */,
-				BB551FB72894E39E0056A32D /* EmpAppUITestsLaunchTests.swift in Sources */,
+				BB8A078B2897313A00ABE684 /* RestError.swift in Sources */,
+				BB8A078D2897313A00ABE684 /* RestServiceResponseError.swift in Sources */,
+				BB8A07D4289732BB00ABE684 /* AppConfigurationServiceTests.swift in Sources */,
+				BB8A07C6289731BC00ABE684 /* AppConfigurationService.swift in Sources */,
+				BB8A07D02897329E00ABE684 /* MockEmpServiceConfiguration.swift in Sources */,
+				BB8A079A2897314900ABE684 /* Results.swift in Sources */,
+				BB8A07C5289731B800ABE684 /* HomeViewModel.swift in Sources */,
+				BB8A07A02897314900ABE684 /* HTTPMethod.swift in Sources */,
+				BB8A07CE2897329E00ABE684 /* MockAppConfigurationService.swift in Sources */,
+				BB8A07982897314900ABE684 /* RestServiceRequestConfiguration.swift in Sources */,
+				BB8A0753289728E100ABE684 /* ConstantTests.swift in Sources */,
+				BB8A07B12897317C00ABE684 /* CacheConfig.swift in Sources */,
+				BB8A07A62897315E00ABE684 /* ImageDownloadManager.swift in Sources */,
+				BB8A07A32897315500ABE684 /* RestServiceResponseHandler.swift in Sources */,
+				BB8A07B82897318A00ABE684 /* FileCacheProvider.swift in Sources */,
+				BB8A07AA2897316900ABE684 /* UIView+Extension.swift in Sources */,
+				BB8A07C4289731B500ABE684 /* HomeViewController.swift in Sources */,
+				BB8A07C8289731C100ABE684 /* EmpService.swift in Sources */,
+				BB8A07962897314900ABE684 /* RestServiceOperation.swift in Sources */,
+				BB8A07DA289732DE00ABE684 /* HomeViewModelTests.swift in Sources */,
+				BB8A07BE2897319600ABE684 /* CacheType.swift in Sources */,
+				BB8A07CF2897329E00ABE684 /* MockEmpService.swift in Sources */,
+				BB8A07D7289732CB00ABE684 /* EmpServiceOperationTests.swift in Sources */,
+				BB8A07BA2897318A00ABE684 /* MemoryCacheProvider.swift in Sources */,
+				BB8A079C2897314900ABE684 /* HTTPProtocol.swift in Sources */,
+				BB8A07C3289731B100ABE684 /* Employee.swift in Sources */,
+				BB8A076728972D0C00ABE684 /* Constants.swift in Sources */,
+				BB8A07AC2897316900ABE684 /* UIImage+Extension.swift in Sources */,
+				BB8A07C2289731AF00ABE684 /* HomeCollectionViewCell.swift in Sources */,
+				BB8A07B32897317C00ABE684 /* CacheProtocol.swift in Sources */,
+				BB8A078E2897313E00ABE684 /* RestService.swift in Sources */,
+				BB8A079E2897314900ABE684 /* HTTPContentType.swift in Sources */,
+				BB8A07C7289731BE00ABE684 /* EmpServiceOperation.swift in Sources */,
+				BB8A07C1289731A400ABE684 /* ActivityIndicatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BB551FA82894E39E0056A32D /* PBXTargetDependency */ = {
+		BB8A0755289728E100ABE684 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BB551F8F2894E39C0056A32D /* EmpApp */;
-			targetProxy = BB551FA72894E39E0056A32D /* PBXContainerItemProxy */;
-		};
-		BB551FB22894E39E0056A32D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB551F8F2894E39C0056A32D /* EmpApp */;
-			targetProxy = BB551FB12894E39E0056A32D /* PBXContainerItemProxy */;
+			targetProxy = BB8A0754289728E100ABE684 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -598,6 +802,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmpApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -625,6 +831,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EmpApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -645,11 +854,9 @@
 			};
 			name = Release;
 		};
-		BB551FBE2894E39E0056A32D /* Debug */ = {
+		BB8A0757289728E100ABE684 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -660,15 +867,12 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmpApp.app/EmpApp";
 			};
 			name = Debug;
 		};
-		BB551FBF2894E39E0056A32D /* Release */ = {
+		BB8A0758289728E100ABE684 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -679,41 +883,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EmpApp.app/EmpApp";
-			};
-			name = Release;
-		};
-		BB551FC12894E39E0056A32D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.EmpAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EmpApp;
-			};
-			name = Debug;
-		};
-		BB551FC22894E39E0056A32D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.swift.EmpAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EmpApp;
 			};
 			name = Release;
 		};
@@ -738,32 +907,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB551FBD2894E39E0056A32D /* Build configuration list for PBXNativeTarget "EmpAppTests" */ = {
+		BB8A0756289728E100ABE684 /* Build configuration list for PBXNativeTarget "EmpAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB551FBE2894E39E0056A32D /* Debug */,
-				BB551FBF2894E39E0056A32D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB551FC02894E39E0056A32D /* Build configuration list for PBXNativeTarget "EmpAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB551FC12894E39E0056A32D /* Debug */,
-				BB551FC22894E39E0056A32D /* Release */,
+				BB8A0757289728E100ABE684 /* Debug */,
+				BB8A0758289728E100ABE684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BB0681322895DDD800B61C44 /* CorePackage */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CorePackage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB551F882894E39C0056A32D /* Project object */;
 }

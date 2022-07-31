@@ -1,20 +1,25 @@
 //
-//  EmpServiceOperation.swift
-//  EmpApp
+//  MockEmpServiceConfiguration.swift
+//  EmpAppTests
 //
 //  Created by Rahul Dubey on 7/30/22.
 //
 
-import Foundation
+import XCTest
+@testable import EmpApp
 
-struct EmpServiceOperation: RestServiceOperation {
-    
+final class MockEmpServiceOperation: RestServiceOperation {
+
     public typealias Components = RestServiceRequestConfiguration.PathComponents
     
     private let configService: AppConfigurationServiceProtocol
-    
-    init(with configService: AppConfigurationServiceProtocol = AppConfigurationService()) {
+
+    init(with configService: AppConfigurationServiceProtocol = MockAppConfigurationService()) {
         self.configService = configService
+    }
+
+    private var pathComponents: Components {
+        return Components(path: configService.empPath, queryItems: nil)
     }
     
     public var configuration: RestServiceRequestConfiguration {
@@ -24,9 +29,5 @@ struct EmpServiceOperation: RestServiceOperation {
                                                method: .get,
                                                contentType: .json,
                                                urlComponents: pathComponents)
-    }
-    
-    private var pathComponents: Components {
-        return Components(path: configService.empPath, queryItems: nil)
     }
 }

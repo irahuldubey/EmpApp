@@ -11,7 +11,7 @@ import Combine
 final public class HomeViewModel {
     
     let employeeListPublisher: PassthroughSubject<[EmployeeElement], Never> = .init()
-    let shouldShowLoadingIndicator: CurrentValueSubject<Bool, Never> = .init(true)
+    let shouldShowLoadingIndicator: PassthroughSubject<Bool, Never> = .init()
     let errorText: PassthroughSubject<String, Never> = .init()
 
     private var empService: EmpServiceProtocol
@@ -21,7 +21,7 @@ final public class HomeViewModel {
     }
 
     func fetchEmployeeList() {
-        let _ = empService.fetchEmpList(modelType: Employees.self) { result in
+            empService.fetchEmpList(modelType: Employees.self) { result in
             DispatchQueue.main.async {
                 self.shouldShowLoadingIndicator.send(false)
             }

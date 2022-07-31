@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AppConfigurationServiceProtocol {
+public protocol AppConfigurationServiceProtocol {
     var empDomain: String { get }
     var empPath: String { get }
     var empBadPath: String { get  }

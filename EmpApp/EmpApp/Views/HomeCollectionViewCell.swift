@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CorePackage
 import Combine
 
 final internal class HomeTableViewCell: UITableViewCell {
