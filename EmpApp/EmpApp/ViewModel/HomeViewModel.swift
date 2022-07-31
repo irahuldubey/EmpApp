@@ -10,7 +10,7 @@ import Combine
 
 final public class HomeViewModel {
     
-    let employeeListPublisher: PassthroughSubject<Employees, Never> = .init()
+    let employeeListPublisher: PassthroughSubject<[EmployeeElement], Never> = .init()
     let shouldShowLoadingIndicator: CurrentValueSubject<Bool, Never> = .init(true)
     let errorText: PassthroughSubject<String, Never> = .init()
 
@@ -21,12 +21,15 @@ final public class HomeViewModel {
     }
 
     func fetchEmployeeList() {
-        empService.fetchEmpList(modelType: Employees.self) { result in
+        let _ = empService.fetchEmpList(modelType: Employees.self) { result in
+            DispatchQueue.main.async {
+                self.shouldShowLoadingIndicator.send(false)
+            }
             switch result {
-            case .success(let employees):
+            case .success(let empObj):
                 DispatchQueue.main.async {
-                    self.employeeListPublisher.send(employees)
-                    self.shouldShowLoadingIndicator.send(false)
+                    let sortedByName = empObj.employees.sorted { $0.fullName < $1.fullName }
+                    self.employeeListPublisher.send(sortedByName)
                 }
             case .failure(let error):
                 DispatchQueue.main.async {

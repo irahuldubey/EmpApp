@@ -57,8 +57,7 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] empList in
                 guard let self = self else { return }
-                print(empList.employees)
-                self.allEmployees = empList.employees
+                self.allEmployees = empList
                 self.listTableView.refreshControl?.endRefreshing()
                 self.shouldShowError(show: false)
                 self.listTableView.reloadData()
@@ -85,13 +84,8 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     }
     
     private func shouldShowError(show: Bool) {
-        if show {
-            self.view.bringSubviewToFront(self.errorView)
-            self.view.sendSubviewToBack(self.listTableView)
-        } else {
-            self.view.bringSubviewToFront(self.listTableView)
-            self.view.sendSubviewToBack(self.errorView)
-        }
+        self.view.bringSubviewToFront(show ? errorView : listTableView)
+        self.view.sendSubviewToBack(show ? listTableView: errorView)
     }
     
     @objc
@@ -106,11 +100,10 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
 }
 
 extension HomeViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeCell, for: indexPath) as? HomeTableViewCell
         cell?.configureListCell(with: allEmployees[indexPath.row])
-        return cell!
+        return cell ?? UITableViewCell()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
