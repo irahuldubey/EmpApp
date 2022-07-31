@@ -102,8 +102,13 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.homeCell, for: indexPath) as? HomeTableViewCell
-        cell?.configureListCell(with: allEmployees[indexPath.row])
-        return cell ?? UITableViewCell()
+        
+        if let cell = cell, !allEmployees.isEmpty {
+            cell.configureListCell(with: allEmployees[indexPath.row])
+            return cell
+        }
+        
+        return UITableViewCell()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
