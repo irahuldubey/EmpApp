@@ -71,6 +71,9 @@
 		BB8A07D4289732BB00ABE684 /* AppConfigurationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07D3289732BB00ABE684 /* AppConfigurationServiceTests.swift */; };
 		BB8A07D7289732CB00ABE684 /* EmpServiceOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07D6289732CB00ABE684 /* EmpServiceOperationTests.swift */; };
 		BB8A07DA289732DE00ABE684 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07D9289732DE00ABE684 /* HomeViewModelTests.swift */; };
+		BB8A07DC2897389300ABE684 /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07DB2897389300ABE684 /* EmployeeType.swift */; };
+		BB8A07DF289738AB00ABE684 /* EmployeeTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07DE289738AB00ABE684 /* EmployeeTypeTests.swift */; };
+		BB8A07E0289738D000ABE684 /* EmployeeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07DB2897389300ABE684 /* EmployeeType.swift */; };
 		BBC8DCFB2895259800B09141 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */; };
 		BBC8DCFE2895269000B09141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFD2895269000B09141 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -126,6 +129,8 @@
 		BB8A07D3289732BB00ABE684 /* AppConfigurationServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfigurationServiceTests.swift; sourceTree = "<group>"; };
 		BB8A07D6289732CB00ABE684 /* EmpServiceOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmpServiceOperationTests.swift; sourceTree = "<group>"; };
 		BB8A07D9289732DE00ABE684 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		BB8A07DB2897389300ABE684 /* EmployeeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeType.swift; sourceTree = "<group>"; };
+		BB8A07DE289738AB00ABE684 /* EmployeeTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTypeTests.swift; sourceTree = "<group>"; };
 		BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBC8DCFD2895269000B09141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				BB551FCA2894EC770056A32D /* Employee.swift */,
+				BB8A07DB2897389300ABE684 /* EmployeeType.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 		BB8A0751289728E100ABE684 /* EmpAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				BB8A07DD2897389F00ABE684 /* DataModel */,
 				BB8A07D8289732D500ABE684 /* ViewModel */,
 				BB8A07D1289732AC00ABE684 /* Networking */,
 				BB8A07CA2897329600ABE684 /* Mocks */,
@@ -445,6 +452,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BB8A07DD2897389F00ABE684 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BB8A07DE289738AB00ABE684 /* EmployeeTypeTests.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		BBC8DCF328951CDE00B09141 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +612,7 @@
 				BB8A07B22897317C00ABE684 /* CacheProtocol.swift in Sources */,
 				BB8A07B02897317C00ABE684 /* CacheConfig.swift in Sources */,
 				BB8A07992897314900ABE684 /* Results.swift in Sources */,
+				BB8A07DC2897389300ABE684 /* EmployeeType.swift in Sources */,
 				BB551FE12894F7740056A32D /* EmpServiceOperation.swift in Sources */,
 				BB551FE82894FF2F0056A32D /* EmpService.swift in Sources */,
 				BB8A07B72897318A00ABE684 /* FileCacheProvider.swift in Sources */,
@@ -615,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB8A078B2897313A00ABE684 /* RestError.swift in Sources */,
+				BB8A07DF289738AB00ABE684 /* EmployeeTypeTests.swift in Sources */,
 				BB8A078D2897313A00ABE684 /* RestServiceResponseError.swift in Sources */,
 				BB8A07D4289732BB00ABE684 /* AppConfigurationServiceTests.swift in Sources */,
 				BB8A07C6289731BC00ABE684 /* AppConfigurationService.swift in Sources */,
@@ -644,6 +661,7 @@
 				BB8A07AC2897316900ABE684 /* UIImage+Extension.swift in Sources */,
 				BB8A07C2289731AF00ABE684 /* HomeCollectionViewCell.swift in Sources */,
 				BB8A07B32897317C00ABE684 /* CacheProtocol.swift in Sources */,
+				BB8A07E0289738D000ABE684 /* EmployeeType.swift in Sources */,
 				BB8A078E2897313E00ABE684 /* RestService.swift in Sources */,
 				BB8A079E2897314900ABE684 /* HTTPContentType.swift in Sources */,
 				BB8A07C7289731BE00ABE684 /* EmpServiceOperation.swift in Sources */,
