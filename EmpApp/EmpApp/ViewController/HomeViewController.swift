@@ -23,6 +23,7 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configureListeners()
         fetchEmployeeList()
         setupNavigationTitle()
