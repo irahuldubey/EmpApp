@@ -40,7 +40,7 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     
     // MARK: Private Functions
     
-    private func initViewModel() {
+    func initViewModel() {
         viewModel = HomeViewModel()
     }
     
