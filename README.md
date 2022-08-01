@@ -1,6 +1,6 @@
 # EmpApp
 
-This is an iOS application (iPhone) for an employee directory. It fetches data from the webservice details like: Employee Name, Photo, Email, Team and Biography. 
+This is an iOS application (iPhone) for an employee directory. It fetches data from the webservice details like: Employee Name, Photo, Email, Team and Biography. This application does support light and dark mode.
 
 ## Build tools & versions used
 
@@ -24,12 +24,14 @@ This is an iOS application (iPhone) for an employee directory. It fetches data f
 - Architecture of the application using MVVM design pattern
 - Decoupled the classes which are reusable and necessary extensions into its own directory same as networking and caching logic these files can also be moved to its own package to be reused across projects.  
 - Protocol Oriented Programming and Dependency Injection
+- Accessibility
 
 ## What was the reason for your focus? What problems were you trying to solve?
 
 - Networking: I was trying to build a reusable system so that it can be scaled for any number of given webservice calls.
 - Caching logic same way its easy encapsulated format and has factory of number of caching services you want your application to scale up.
-- Protocol Oriented Programming and Dependency Injection for testability 
+- Protocol Oriented Programming and Dependency Injection for testability
+- Accessibility to make sure application reaches wider audience and helps the people who really have challenges to use the applications, added accessibility tags for UI Automation tests
 
 ## How long did you spend on this project?
 
