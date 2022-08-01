@@ -85,6 +85,8 @@
 		BB8A07FB28978B8B00ABE684 /* LightMode.png in Resources */ = {isa = PBXBuildFile; fileRef = BB8A07F928978B8B00ABE684 /* LightMode.png */; };
 		BB8A07FC28978B8B00ABE684 /* DarkMode.png in Resources */ = {isa = PBXBuildFile; fileRef = BB8A07FA28978B8B00ABE684 /* DarkMode.png */; };
 		BB8A07FF289790F100ABE684 /* RestServiceResponseErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A07FE289790F100ABE684 /* RestServiceResponseErrorTests.swift */; };
+		BB8A08032897944900ABE684 /* MockFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A08022897944900ABE684 /* MockFileManager.swift */; };
+		BB8A0805289794E600ABE684 /* FileCacheProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8A0804289794E600ABE684 /* FileCacheProviderTests.swift */; };
 		BBC8DCFB2895259800B09141 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */; };
 		BBC8DCFE2895269000B09141 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC8DCFD2895269000B09141 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -151,6 +153,8 @@
 		BB8A07F928978B8B00ABE684 /* LightMode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightMode.png; sourceTree = "<group>"; };
 		BB8A07FA28978B8B00ABE684 /* DarkMode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DarkMode.png; sourceTree = "<group>"; };
 		BB8A07FE289790F100ABE684 /* RestServiceResponseErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestServiceResponseErrorTests.swift; sourceTree = "<group>"; };
+		BB8A08022897944900ABE684 /* MockFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFileManager.swift; sourceTree = "<group>"; };
+		BB8A0804289794E600ABE684 /* FileCacheProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCacheProviderTests.swift; sourceTree = "<group>"; };
 		BBC8DCFA2895259800B09141 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BBC8DCFD2895269000B09141 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -431,6 +435,7 @@
 				BB8A07CB2897329E00ABE684 /* MockAppConfigurationService.swift */,
 				BB8A07CC2897329E00ABE684 /* MockEmpService.swift */,
 				BB8A07CD2897329E00ABE684 /* MockEmpServiceConfiguration.swift */,
+				BB8A08022897944900ABE684 /* MockFileManager.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				BB8A07EC2897413B00ABE684 /* CacheConfigTests.swift */,
+				BB8A0804289794E600ABE684 /* FileCacheProviderTests.swift */,
 			);
 			path = Cache;
 			sourceTree = "<group>";
@@ -748,6 +754,8 @@
 				BB8A07B32897317C00ABE684 /* CacheProtocol.swift in Sources */,
 				BB8A07FF289790F100ABE684 /* RestServiceResponseErrorTests.swift in Sources */,
 				BB8A07E0289738D000ABE684 /* EmployeeType.swift in Sources */,
+				BB8A08032897944900ABE684 /* MockFileManager.swift in Sources */,
+				BB8A0805289794E600ABE684 /* FileCacheProviderTests.swift in Sources */,
 				BB8A078E2897313E00ABE684 /* RestService.swift in Sources */,
 				BB8A079E2897314900ABE684 /* HTTPContentType.swift in Sources */,
 				BB8A07F728974C5100ABE684 /* CacheType.swift in Sources */,
