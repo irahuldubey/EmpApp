@@ -9,10 +9,10 @@ import Foundation
 
 public protocol CacheProviderProtocol {
     
-    func load(key: String) -> Data?
+    func loadData(key: String) -> Data?
     
-    func save(key: String, value: NSData?)
+    func saveData(key: String, value: NSData?)
     
-    func clearCache()
+    func burstCache()
     
 }

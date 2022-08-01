@@ -7,17 +7,15 @@
 
 import Foundation
 
-internal class FileCacheProvider: CacheProviderProtocol {
+class FileCacheProvider: CacheProviderProtocol {
     
-    private var loggingEnabled: Bool
     private let cacheDirectory: String
     
-    internal init(cacheDir: String, enableLogging: Bool = true) {
+    init(cacheDir: String) {
         cacheDirectory = cacheDir
-        loggingEnabled = enableLogging
     }
     
-    internal func load(key: String) -> Data? {
+    func loadData(key: String) -> Data? {
         guard let path = fileURL(fileName: key) else {
             return nil
         }
@@ -25,12 +23,12 @@ internal class FileCacheProvider: CacheProviderProtocol {
         do {
             data = try Data(contentsOf: path)
         } catch {
-            consoleOutput("FileCacheProvider - Failed to create object", error)
+            debugPrint("FileCacheProvider - Failed to create object \(error)")
         }
         return data
     }
     
-    internal func save(key: String, value: NSData?) {
+    func saveData(key: String, value: NSData?) {
         guard let path = fileURL(fileName: key) else { return }
         guard let newValue = value as Data? else {
             try? FileManager.default.removeItem(at: path)
@@ -39,7 +37,7 @@ internal class FileCacheProvider: CacheProviderProtocol {
         do {
             try newValue.write(to: path, options: .atomic)
         } catch {
-            consoleOutput("FileCacheProvider Failed to write data on file", error)
+            debugPrint("FileCacheProvider Failed to write data on file \(error)")
         }
     }
     
@@ -52,7 +50,7 @@ internal class FileCacheProvider: CacheProviderProtocol {
         do {
             cachesDir = try cachesDirectory()
         } catch {
-            consoleOutput("FileCacheProvider Cannot fetch from cache", error)
+            debugPrint("FileCacheProvider Cannot fetch from cache \(error)")
             return nil
         }
         return cachesDir?.appendingPathComponent(escapedName)
@@ -79,8 +77,7 @@ internal class FileCacheProvider: CacheProviderProtocol {
         do {
             cachesDir = try cachesDirectory()
         } catch {
-            consoleOutput("FileCacheProvider to fetch from dirctory", error)
-            return
+            debugPrint("FileCacheProvider to fetch from dirctory \(error)")
         }
         guard let dir = cachesDir else {
             return
@@ -88,16 +85,11 @@ internal class FileCacheProvider: CacheProviderProtocol {
         do {
             try FileManager.default.removeItem(at: dir)
         } catch {
-            consoleOutput("FileCacheProvider deleting files from the caches directory: ", error)
+            debugPrint("FileCacheProvider deleting files from the caches directory: \(error)")
         }
     }
-    
-    private func consoleOutput(_ items: Any...) {
-        guard loggingEnabled else { return }
-        debugPrint(items)
-    }
-    
-    public func clearCache() {
+
+    public func burstCache() {
         deleteCacheDirectory()
     }
 }

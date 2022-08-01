@@ -26,7 +26,7 @@ internal final class ImageDownloadManager {
     }
 
     internal func loadImage(from url: URL) -> AnyPublisher<UIImage?, Never> {
-        if let imageData = cacheProvider.load(key: url.absoluteString),
+        if let imageData = cacheProvider.loadData(key: url.absoluteString),
             let imageFromData: UIImage = UIImage(data: imageData) {
             return Just(imageFromData).eraseToAnyPublisher()
         }
@@ -40,7 +40,7 @@ internal final class ImageDownloadManager {
             }
             .handleEvents(receiveOutput: { [unowned self] image in
                 guard let image = image, let imageData = image.pngData() as? NSData else { return }
-                cacheProvider.save(key: url.absoluteString, value: imageData)
+                cacheProvider.saveData(key: url.absoluteString, value: imageData)
             })
             .subscribe(on: backgroundQueue)
             .receive(on: RunLoop.main)
@@ -48,6 +48,6 @@ internal final class ImageDownloadManager {
     }
     
     internal func clearCache() {
-        cacheProvider.clearCache()
+        cacheProvider.burstCache()
     }
 }

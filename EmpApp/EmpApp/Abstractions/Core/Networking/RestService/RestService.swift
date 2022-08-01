@@ -12,7 +12,7 @@ public class RestService<T: RestServiceOperation> {
         
     let urlSession: URLSession
     
-    //MARK: Intializer
+    //MARK: Init
     
     public init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
