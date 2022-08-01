@@ -8,21 +8,34 @@
 import UIKit
 import Combine
 
-final internal class HomeTableViewCell: UITableViewCell {
+final class HomeTableViewCell: UITableViewCell {
     
+    // MARK: - Outlets
     @IBOutlet var empName: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var biography: UILabel!
     @IBOutlet weak var team: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     
+    // MARK: - Properties
     private var cancellable: AnyCancellable?
 
+    // MARK: - ViewLifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpCell()
     }
+
+    // MARK: - View Configuration
+    func configureListCell(with model: EmployeeElement) {
+         setFullName(from: model)
+         setTeam(from: model)
+         setBiography(from: model)
+         setEmailAddress(from: model)
+         setImage(from: model)
+     }
     
+    // MARK: - Private Functions
     private func setUpCell() {
         iconImageView.layer.masksToBounds = true
         iconImageView.layer.cornerRadius = 60
@@ -33,14 +46,6 @@ final internal class HomeTableViewCell: UITableViewCell {
         iconImageView.layer.shadowRadius = 2.0
         iconImageView.layer.borderColor = UIColor.lightText.cgColor
     }
-
-    internal func configureListCell(with model: EmployeeElement) {
-         setFullName(from: model)
-         setTeam(from: model)
-         setBiography(from: model)
-         setEmailAddress(from: model)
-         setImage(from: model)
-     }
     
     private func setBiography(from model: EmployeeElement) {
         guard let biotext = model.biography else {

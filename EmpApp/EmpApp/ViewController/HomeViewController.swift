@@ -11,22 +11,21 @@ import Combine
 final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     
     // MARK: Outlets
-    
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var errorView: UIView!
     @IBOutlet weak var listTableView: UITableView!
     
     // MARK: Properties
-    internal let viewModel: HomeViewModel = HomeViewModel()
+    var viewModel: HomeViewModelProtocol?
     private var allEmployees: [EmployeeElement] = [EmployeeElement]()
     private var cancellables = Set<AnyCancellable>()
     internal var activityIndicator = UIActivityIndicatorView()
 
     // MARK: ViewLifeCycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initViewModel()
         configureListeners()
         fetchEmployeeList()
         setupNavigationTitle()
@@ -40,6 +39,11 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     }
     
     // MARK: Private Functions
+    
+    private func initViewModel() {
+        viewModel = HomeViewModel()
+    }
+    
     private func setupPullToRefresh() {
         listTableView.refreshControl = UIRefreshControl()
         listTableView.refreshControl?.attributedTitle = NSAttributedString(string: Constants.Text.pullToRefresh)
@@ -60,6 +64,11 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     }
     
     private func configureListeners() {
+        
+        guard let viewModel = viewModel else {
+            return
+        }
+        
         viewModel
             .employeeListPublisher
             .receive(on: DispatchQueue.main)
@@ -98,6 +107,9 @@ final class HomeViewController: UIViewController, ActivityIndicatorProtocol {
     
     @objc
     private func fetchEmployeeList() {
+        guard let viewModel = viewModel else {
+            return
+        }
         allEmployees.removeAll()
         setupActivityIndicator()
         viewModel.fetchEmployeeList()

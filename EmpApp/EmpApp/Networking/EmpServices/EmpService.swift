@@ -14,9 +14,11 @@ protocol EmpServiceProtocol {
 
 final class EmpService: EmpServiceProtocol {
     
+    // MARK: Properties
     private let restService: RestService<EmpServiceOperation>
     private let empServiceOperation: RestServiceOperation
     
+    // MARK: Init
     init(with service: RestService<EmpServiceOperation> = RestService(), operation: RestServiceOperation = EmpServiceOperation()) {
         self.restService = service
         self.empServiceOperation = operation
@@ -39,6 +41,7 @@ final class EmpService: EmpServiceProtocol {
         }
     }
 
+    // MARK: Service Call
     func fetchEmpList<T: Codable>(modelType: T.Type, completionHandler: @escaping(Result<T>) -> Void) {
         return restService.performRestServiceOperation(empServiceOperation) { (result) in
             switch result {

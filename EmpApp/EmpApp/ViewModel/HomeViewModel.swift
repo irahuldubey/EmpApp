@@ -8,18 +8,30 @@
 import Foundation
 import Combine
 
-final public class HomeViewModel {
+protocol HomeViewModelProtocol {
+    // Publishers
+    var employeeListPublisher: PassthroughSubject<[EmployeeElement], Never> { get }
+    var shouldShowLoadingIndicator: PassthroughSubject<Bool, Never> { get }
+    var errorText: PassthroughSubject<String, Never> { get }
+    // Methods
+    func fetchEmployeeList()
+}
+
+final public class HomeViewModel: HomeViewModelProtocol {
     
+    // MARK: - Publishers
     let employeeListPublisher: PassthroughSubject<[EmployeeElement], Never> = .init()
     let shouldShowLoadingIndicator: PassthroughSubject<Bool, Never> = .init()
     let errorText: PassthroughSubject<String, Never> = .init()
 
     private var empService: EmpServiceProtocol
     
+    // MARK: - Init
     init(with empService: EmpServiceProtocol = EmpService()) {
         self.empService = empService
     }
 
+    // MARK: - ServiceMethods
     func fetchEmployeeList() {
             empService.fetchEmpList(modelType: Employees.self) { result in
             DispatchQueue.main.async {

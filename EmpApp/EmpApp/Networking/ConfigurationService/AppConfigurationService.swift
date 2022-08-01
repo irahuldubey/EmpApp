@@ -23,6 +23,7 @@ struct AppConfigurationService: AppConfigurationServiceProtocol {
         case emptyPath
     }
     
+    // MARK: - Computed Properties
     var empDomain: String {
         if loadRemoteConfiguration().isEmpty {
             return loadLocalConfiguration()[Keys.domain.rawValue] ?? ""
@@ -56,6 +57,7 @@ struct AppConfigurationService: AppConfigurationServiceProtocol {
 
     }
     
+    // MARK: - Configuration Loading Methods
     // Call the local cache get the configuration
     func loadLocalConfiguration() -> [String: String] {
         var configDictionary = [String: String]()
