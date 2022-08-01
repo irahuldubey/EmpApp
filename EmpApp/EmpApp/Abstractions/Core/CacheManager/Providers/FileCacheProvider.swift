@@ -89,7 +89,7 @@ class FileCacheProvider: CacheProviderProtocol {
         }
     }
 
-    public func burstCache() {
+     func burstCache() {
         deleteCacheDirectory()
     }
 }

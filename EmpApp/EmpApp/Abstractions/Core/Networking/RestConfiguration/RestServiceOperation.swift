@@ -7,14 +7,14 @@
 
 import Foundation
 
-public protocol RestServiceOperation {
+ protocol RestServiceOperation {
     var configuration: RestServiceRequestConfiguration { get }
 }
 
 // MARK: - Default Implementation
 extension RestServiceOperation {
 
-    public func requestURL() throws -> URL {
+     func requestURL() throws -> URL {
         let components = urlComponents(scheme: scheme, host: host, path: path, queryItems: urlQueryItems)
         if let url = components?.url {
             return url

@@ -7,12 +7,12 @@
 
 import Foundation
 
-public enum Result<T> {
+ enum Result<T> {
     case success(T)
     case failure(Error)
 }
 
-public extension Result {
+ extension Result {
     func resolve() throws -> T {
         switch self {
         case .success(let value):
@@ -23,7 +23,7 @@ public extension Result {
     }
 }
 
-public extension Result where T == Data {
+ extension Result where T == Data {
     func decoded<T: Decodable>(decoder: JSONDecoder = JSONDecoder()) throws -> T {
         let data = try resolve()
         return try decoder.decode(T.self, from: data)

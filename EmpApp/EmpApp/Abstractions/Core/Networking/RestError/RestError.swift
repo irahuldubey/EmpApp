@@ -8,7 +8,7 @@
 import Foundation
 
 // Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-public enum RestError: LocalizedError, Equatable {
+enum RestError: LocalizedError, Equatable {
     
     case informational(code: Int)
     case redirection(code: Int)

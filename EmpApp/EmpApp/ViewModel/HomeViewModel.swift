@@ -17,7 +17,7 @@ protocol HomeViewModelProtocol {
     func fetchEmployeeList()
 }
 
-final public class HomeViewModel: HomeViewModelProtocol {
+final  class HomeViewModel: HomeViewModelProtocol {
     
     // MARK: - Publishers
     let employeeListPublisher: PassthroughSubject<[EmployeeElement], Never> = .init()

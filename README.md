@@ -43,6 +43,7 @@ This is an iOS application (iPhone) for an employee directory. It fetches data f
 - I also wanted to try few things for better UI performance but I wanted to support previous versions as well so didn't goto latest versions, its not a huge performance hit but it would be really nice to use the newer API's so that we get smooth performance with introduction of new API's from Apple
 - Created packages for different modules, Rest Service, Caching Service etc and wrote more tests for it.
 - Added LoggingManager to log the error and other cases which can help in debugging also that would have helped the application to upload the logs to Firebase or DataDog libraries
+- Offline support so that when network is up we can call the API and gets the latest data
 
 ## What do you think is the weakest part of your project?
 

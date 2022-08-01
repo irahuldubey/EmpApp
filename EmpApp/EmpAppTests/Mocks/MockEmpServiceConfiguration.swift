@@ -10,7 +10,7 @@ import XCTest
 
 final class MockEmpServiceOperation: RestServiceOperation {
 
-    public typealias Components = RestServiceRequestConfiguration.PathComponents
+     typealias Components = RestServiceRequestConfiguration.PathComponents
     
     private let configService: AppConfigurationServiceProtocol
 
@@ -22,7 +22,7 @@ final class MockEmpServiceOperation: RestServiceOperation {
         return Components(path: configService.empPath, queryItems: nil)
     }
     
-    public var configuration: RestServiceRequestConfiguration {
+     var configuration: RestServiceRequestConfiguration {
         let pathComponents = self.pathComponents
         return RestServiceRequestConfiguration(urlString: configService.empDomain,
                                                scheme: .https,

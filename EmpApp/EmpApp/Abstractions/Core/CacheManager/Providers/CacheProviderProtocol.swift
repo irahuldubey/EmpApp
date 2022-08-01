@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol CacheProviderProtocol {
+protocol CacheProviderProtocol {
     
     func loadData(key: String) -> Data?
     

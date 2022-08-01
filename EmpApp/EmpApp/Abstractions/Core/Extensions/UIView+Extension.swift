@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public extension UIView {
+ extension UIView {
     
     static let loadingViewTag = 1938123987
     

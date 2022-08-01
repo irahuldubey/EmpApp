@@ -7,51 +7,51 @@
 
 import Foundation
 
-public enum RestServiceOperationError: Error {
+ enum RestServiceOperationError: Error {
     case urlStringError
 }
 
 // Defines the configuration for the RestServiceRequest
-public struct RestServiceRequestConfiguration {
+ struct RestServiceRequestConfiguration {
  
     // MARK: HTTPProtocol Type
-    public enum HttpProtocol: String {
+     enum HttpProtocol: String {
         case http
         case https
     }
     
     // MARK: HTTP Method
-    public enum HttpMethod: String {
+     enum HttpMethod: String {
         case get = "GET"
     }
     
     // MARK: Content Type
-    public enum HttpContentType: String {
+     enum HttpContentType: String {
         case json = "application/json" //
     }
     
     // MARK: Path Compontents
-    public struct PathComponents {
+     struct PathComponents {
         let path: String
         let queryItems: [String: String?]?
         
-        public init(path: String, queryItems:[String: String?]? = nil) {
+         init(path: String, queryItems:[String: String?]? = nil) {
             self.path = path
             self.queryItems = queryItems
         }
     }
     
-    // MARK: Public Properties
+    // MARK:  Properties
     
-    public let urlString: String
-    public let scheme: HttpProtocol
-    public let method: HttpMethod
-    public let contentType: HttpContentType
-    public let urlComponents: PathComponents
-    public let data: Data?
+     let urlString: String
+     let scheme: HttpProtocol
+     let method: HttpMethod
+     let contentType: HttpContentType
+     let urlComponents: PathComponents
+     let data: Data?
     
     // MARK: Initializer
-    public init(urlString: String,
+     init(urlString: String,
                 scheme: HttpProtocol,
                 method: HttpMethod,
                 contentType: HttpContentType,

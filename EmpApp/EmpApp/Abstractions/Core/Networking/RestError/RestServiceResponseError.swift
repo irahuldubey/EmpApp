@@ -7,16 +7,16 @@
 
 import Foundation
 
-public enum RestServiceError: Error {
+ enum RestServiceError: Error {
     case invalidOperation(Error)
     case invalidStatusCode(Int)
     case unknown
 }
 
-public struct RestServiceResponseParser {
+ struct RestServiceResponseParser {
     
     // Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
-    public enum Status {
+     enum Status {
         case informational(Int)
         case success(Int)
         case redirection(Int)
@@ -41,12 +41,12 @@ public struct RestServiceResponseParser {
         }
     }
     
-    public let status: Status
-    public let data: Data?
-    public let headers: [AnyHashable: Any]
+     let status: Status
+     let data: Data?
+     let headers: [AnyHashable: Any]
     
     // MARK: Initializer
-    public init(withResponse response: HTTPURLResponse, data: Data?) throws {
+     init(withResponse response: HTTPURLResponse, data: Data?) throws {
         let statusCode = response.statusCode
         guard let status = Status.init(statusCode: statusCode) else {
             throw RestServiceError.invalidStatusCode(statusCode)

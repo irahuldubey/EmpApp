@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 /// Activity Indicator Protocol to show the ActivityIndicator
-public protocol ActivityIndicatorProtocol {
+ protocol ActivityIndicatorProtocol {
   
   /// Instance of activity indicator
   var activityIndicator: UIActivityIndicatorView { get }
@@ -22,7 +22,7 @@ public protocol ActivityIndicatorProtocol {
 }
 
 //Apply the protocol to UIViewController in default conformance
-public extension ActivityIndicatorProtocol where Self: UIViewController {
+ extension ActivityIndicatorProtocol where Self: UIViewController {
   
   /// Show the Loading Indicator
   func showLoadingIndicator(withSize size: CGSize) {
@@ -55,7 +55,7 @@ public extension ActivityIndicatorProtocol where Self: UIViewController {
   }
 }
 
-public extension ActivityIndicatorProtocol {
+ extension ActivityIndicatorProtocol {
   var activityIndicator: UIActivityIndicatorView {
       return UIActivityIndicatorView()
   }

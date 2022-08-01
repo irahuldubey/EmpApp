@@ -8,13 +8,13 @@
 import Foundation
 import Combine
 
-public class RestService<T: RestServiceOperation> {
+class RestService<T: RestServiceOperation> {
         
     let urlSession: URLSession
     
-    //MARK: Init
+    // MARK: Init
     
-    public init(urlSession: URLSession = URLSession.shared) {
+    init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
     }
     
@@ -22,7 +22,7 @@ public class RestService<T: RestServiceOperation> {
         return RestServiceResponseHandler()
     }()
     
-    public func performRestServiceOperation(_ operation: RestServiceOperation, completionHandler: @escaping (Result<RestServiceResponseParser>) -> Void) {
+    func performRestServiceOperation(_ operation: RestServiceOperation, completionHandler: @escaping (Result<RestServiceResponseParser>) -> Void) {
         do {
             let request = try operation.requestURL()
             let task = urlSession.dataTask(with: request) { (data, response, error) in

@@ -6,6 +6,6 @@
 //
 
 // MARK: Content Type
-public enum HttpContentType: String {
+ enum HttpContentType: String {
     case json = "application/json"
 }

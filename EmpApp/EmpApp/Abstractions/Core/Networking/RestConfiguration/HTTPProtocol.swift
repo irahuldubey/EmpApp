@@ -6,7 +6,7 @@
 //
 
 //MARK: - HTTP Protocol
-public enum HttpProtocol: String {
+ enum HttpProtocol: String {
     case http
     case https
 }

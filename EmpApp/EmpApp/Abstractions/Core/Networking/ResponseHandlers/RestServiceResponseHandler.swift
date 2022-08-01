@@ -7,13 +7,13 @@
 
 import Foundation
 
-public struct RestServiceResponseData {
+ struct RestServiceResponseData {
     let data: Data?
     let response: URLResponse?
     let error: Error?
 }
 
-public class RestServiceResponseHandler {
+ class RestServiceResponseHandler {
 
     func handle(urlResponse serviceResponse: RestServiceResponseData, completion: @escaping (Result<RestServiceResponseParser>) -> Void) {
         if let error = serviceResponse.error {
