@@ -10,9 +10,11 @@ import Foundation
 class FileCacheProvider: CacheProviderProtocol {
     
     private let cacheDirectory: String
+    private let manager: FileManager
     
-    init(cacheDir: String) {
+    init(cacheDir: String, manager: FileManager = FileManager.default) {
         cacheDirectory = cacheDir
+        self.manager = manager
     }
     
     func loadData(key: String) -> Data? {
@@ -31,7 +33,7 @@ class FileCacheProvider: CacheProviderProtocol {
     func saveData(key: String, value: NSData?) {
         guard let path = fileURL(fileName: key) else { return }
         guard let newValue = value as Data? else {
-            try? FileManager.default.removeItem(at: path)
+            try? manager.removeItem(at: path)
             return
         }
         do {
@@ -59,13 +61,13 @@ class FileCacheProvider: CacheProviderProtocol {
     private func cachesDirectory() throws -> URL? {
         var cachesDir: URL? = nil
         do {
-            cachesDir = try FileManager.default.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(cacheDirectory, isDirectory: true)
+            cachesDir = try manager.url(for: .cachesDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(cacheDirectory, isDirectory: true)
         } catch {
             throw error
         }
         guard let directory = cachesDir else { return nil }
         do {
-            try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
+            try manager.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
         } catch {
             throw error
         }
@@ -83,7 +85,7 @@ class FileCacheProvider: CacheProviderProtocol {
             return
         }
         do {
-            try FileManager.default.removeItem(at: dir)
+            try manager.removeItem(at: dir)
         } catch {
             debugPrint("FileCacheProvider deleting files from the caches directory: \(error)")
         }

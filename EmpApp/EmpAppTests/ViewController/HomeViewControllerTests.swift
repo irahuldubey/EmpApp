@@ -19,6 +19,7 @@ final class HomeViewControllerTests: XCTestCase {
     // Testing properties of HomeViewController
     func testViewControllerIsInitialized() throws {
         sut = HomeViewController()
+        sut?.initViewModel()
         XCTAssertNotNil(sut?.viewModel, "ViewModel is nil")
     }
     
