@@ -8,8 +8,24 @@
 @testable import EmpApp
 
 final class MockAppConfigurationService: AppConfigurationServiceProtocol {
-    var empDomain: String { "DOMAIN" }
-    var empPath: String { "EMP_PATH" }
+   
+    private let domain: String
+    private let path: String
+    
+    init(with domain: String = "", path: String = "") {
+        self.domain = domain
+        self.path = path
+    }
+    
+    var empDomain: String {
+        !domain.isEmpty ? domain : "DOMAIN"
+    }
+    
+    var empPath: String {
+        !path.isEmpty ? path : "EMP_PATH"
+    }
+    
     var empBadPath: String { "BAD_PATH"  }
     var empEmptyPath: String { "EMPTY_PATH"  }
+    
 }
